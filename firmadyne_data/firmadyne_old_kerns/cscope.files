@@ -1,0 +1,9 @@
+./hooks.c
+./firmadyne.h
+./procfs_stubs.h
+./procfs_stubs.c
+./hooks-private.h
+./devfs_stubs.c
+./devfs_stubs.h
+./firmadyne.c
+./hooks.h

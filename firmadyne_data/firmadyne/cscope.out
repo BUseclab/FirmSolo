@@ -1,0 +1,8511 @@
+cscope 15 $HOME/Kernels/firmadyne -q 0000001070 0000047510
+	@devfs_stubs.c
+
+1 
+	~<löux/cdev.h
+>
+
+2 
+	~<löux/devi˚.h
+>
+
+3 
+	~<löux/î∫o.h
+>
+
+4 
+	~<löux/fs.h
+>
+
+5 
+	~<löux/maj‹.h
+>
+
+6 
+	~<löux/miscdevi˚.h
+>
+
+7 
+	~<löux/kî√l.h
+>
+
+8 
+	~<löux/uac˚ss.h
+>
+
+10 
+	~"devfs_°ubs.h
+"
+
+11 
+	~"fúmady√.h
+"
+
+13 
+	#STUB_ENTRIES
+ \
+
+14 
+	`DEVICE
+(
+acos_«t_˛i
+, 100, 0, 
+›í
+, 
+ªad
+, 
+wrôe
+, 
+˛o£
+, 
+acos_io˘l
+) \
+
+15 
+	`DEVICE
+(
+brcmbﬂrd
+, 206, 0, 
+›í
+, 
+ªad
+, 
+wrôe
+, 
+˛o£
+, 
+io˘l
+) \
+
+16 
+	`DEVICE
+(
+d¶_˝e_≠i
+, 107, 0, 
+›í
+, 
+ªad
+, 
+wrôe
+, 
+˛o£
+, 
+io˘l
+) \
+
+17 
+	`DEVICE
+(
+gpio
+, 252, 0, 
+›í
+, 
+ªad
+, 
+wrôe
+, 
+˛o£
+, 
+io˘l
+) \
+
+18 
+	`DEVICE
+(
+nvøm
+, 111, 0, 
+›í
+, 
+ªad
+, 
+wrôe
+, 
+˛o£
+, 
+io˘l
+) \
+
+19 
+	`DEVICE
+(
+pib
+, 31, 3, 
+›í
+, 
+ªad
+, 
+wrôe
+, 
+˛o£
+, 
+io˘l
+) \
+
+20 
+	`DEVICE
+(
+sc_Àd
+, 225, 0, 
+›í
+, 
+ªad
+, 
+wrôe
+, 
+˛o£
+, 
+io˘l
+) \
+
+21 
+	`DEVICE
+(
+tˇ0
+, 183, 0, 
+›í
+, 
+ªad
+, 
+wrôe
+, 
+˛o£
+, 
+io˘l
+) \
+
+22 
+	`DEVICE
+(
+ticfg
+, 0, 0, 
+›í
+, 
+ªad
+, 
+wrôe
+, 
+˛o£
+, 
+io˘l
+) \
+
+23 
+	`DEVICE
+(
+w©chdog
+, 
+MISC_MAJOR
+, 
+WATCHDOG_MINOR
+, 
+›í
+, 
+ªad
+, 
+wrôe
+, 
+˛o£
+, 
+io˘l
+) \
+
+24 
+	`DEVICE
+(
+wdt
+, 253, 0, 
+›í
+, 
+ªad
+, 
+wrôe
+, 
+˛o£
+, 
+io˘l
+) \
+
+25 
+	`DEVICE
+(
+zybäio
+, 220, 0, 
+›í
+, 
+ªad
+, 
+wrôe
+, 
+˛o£
+, 
+io˘l
+)
+
+	)
+
+27 
+	$acos_io˘l
+(
+fûe
+ *fûe, 
+cmd
+, 
+¨g_±r
+) {
+
+28 
+ªtvÆ
+ = 0;
+
+30 i‡(!
+devfs
+) {
+
+31  -
+EINVAL
+;
+
+34 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": ACOS io˘l: 0x%x\n", 
+cmd
+);
+
+36 
+cmd
+) {
+
+38 
+	`¥ötk
+(
+KERN_WARNING
+ 
+MODULE_NAME
+": ACOS:ágApi_GetFirstTriggerConf\n");
+
+39 
+ªtvÆ
+ = 1;
+
+42 
+ªtvÆ
+ = 0;
+
+46  
+ªtvÆ
+;
+
+47 
+	}
+}
+
+49 
+	$io˘l
+(
+fûe
+ *fûe, 
+cmd
+, 
+¨g_±r
+) {
+
+50 
+ªtvÆ
+ = 0;
+
+52 i‡(!
+devfs
+) {
+
+53  -
+EINVAL
+;
+
+56 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": io˘l: 0x%x\n", 
+cmd
+);
+
+58 
+cmd
+) {
+
+60 
+ªtvÆ
+ = 0;
+
+64  
+ªtvÆ
+;
+
+65 
+	}
+}
+
+67 
+	$›í
+(
+öode
+ *öode, 
+fûe
+ *file) {
+
+73 i‡(!
+devfs
+) {
+
+74  -
+EINVAL
+;
+
+78 
+	}
+}
+
+80 
+	$˛o£
+(
+öode
+ *öode, 
+fûe
+ *file) {
+
+81 i‡(!
+devfs
+) {
+
+82  -
+EINVAL
+;
+
+86 
+	}
+}
+
+88 
+ssize_t
+ 
+	$ªad
+(
+fûe
+ *fûe, 
+__u£r
+ *
+buf
+, 
+size_t
+ 
+size
+, 
+loff_t
+ *
+off£t
+) {
+
+89 c⁄° 
+d©a
+[] = "0";
+
+90 
+loff_t
+ 
+cou¡
+ = 
+	`mö
+(÷off_tË
+size
+, 
+	`ARRAY_SIZE
+(
+d©a
+Ë- *
+off£t
+);
+
+92 i‡(!
+devfs
+) {
+
+93  -
+EINVAL
+;
+
+96 i‡(*
+off£t
+ >
+	`ARRAY_SIZE
+(
+d©a
+)) {
+
+100 i‡(
+	`c›y_to_u£r
+(
+buf
+, 
+d©a
+ + *
+off£t
+, 
+cou¡
+)) {
+
+101  -
+EFAULT
+;
+
+104 *
+off£t
+ +
+cou¡
+;
+
+105  
+cou¡
+;
+
+106 
+	}
+}
+
+108 
+ssize_t
+ 
+	$wrôe
+(
+fûe
+ *fûe, c⁄° 
+__u£r
+ *
+buf
+, 
+size_t
+ 
+size
+, 
+loff_t
+ *
+off£t
+) {
+
+109 i‡(!
+devfs
+) {
+
+110  -
+EINVAL
+;
+
+113  
+size
+;
+
+114 
+	}
+}
+
+116 
+	$a˛
+(
+devi˚
+ *
+dev
+, 
+kobj_uevít_ív
+ *
+ív
+) {
+
+117 
+	`add_uevít_v¨
+(
+ív
+, "DEVMODE=%#o", 0666);
+
+119 
+	}
+}
+
+121 
+	#DEVICE
+(
+a
+, 
+b
+, 
+c
+, 
+d
+, 
+e
+, 
+f
+, 
+g
+, 
+h
+) \
+
+122 
+dev_t
+ 
+a
+##
+_devno
+ = 
+	`MKDEV
+(
+b
+, 
+c
+); \
+
+123 
+cdev
+ 
+a
+##
+_cdev
+; \
+
+124 
+˛ass
+ *
+a
+##
+_˛ass
+; \
+
+125 
+devi˚
+ *
+a
+##
+_dev
+; \
+
+126 
+fûe_›î©i⁄s
+ 
+a
+##
+_f›s
+ = { \
+
+127 .
+ow√r
+ = 
+THIS_MODULE
+, \
+
+128 .
+›í
+ = 
+d
+, \
+
+129 .
+ªad
+ = 
+e
+, \
+
+130 .
+wrôe
+ = 
+f
+, \
+
+131 .
+ªÀa£
+ = 
+g
+, \
+
+132 .
+u∆ocked_io˘l
+ = 
+h
+, \
+
+133 };
+
+	)
+
+135 
+	gSTUB_ENTRIES
+
+
+136 #unde‡
+DEVICE
+
+
+138 
+	$ªgi°î_devfs_°ubs
+() {
+
+139 
+ªt
+ = 0;
+
+141 i‡(!
+devfs
+) {
+
+142  
+ªt
+;
+
+145 
+	#DEVICE
+(
+a
+, 
+b
+, 
+c
+, 
+d
+, 
+e
+, 
+f
+, 
+g
+, 
+h
+) \
+
+146 i‡((
+ªt
+ = 
+	`ªgi°î_chrdev_ªgi⁄
+(
+a
+##
+_devno
+, 1, #a)) < 0) { \
+
+147 
+	`¥ötk
+(
+KERN_WARNING
+ 
+MODULE_NAME
+": C™nŸÑegi°î ch¨a˘î devi˚: %s, 0x%x, 0x%x!\n", #a, 
+	`MAJOR
+(
+a
+##
+_devno
+), 
+	`MINOR
+(a##_devno)); \
+
+148 
+a
+##
+_out
+; \
+
+151 i‡(
+	`IS_ERR
+(
+a
+##
+_˛ass
+ = 
+	`˛ass_¸óã
+(
+THIS_MODULE
+, #a))) { \
+
+152 
+	`¥ötk
+(
+KERN_WARNING
+ 
+MODULE_NAME
+": Cannot create device class: %s!\n", #a); \
+
+153 
+	`uƒegi°î_chrdev_ªgi⁄
+(
+a
+##
+_devno
+, 1); \
+
+154 
+ªt
+ = 
+	`PTR_ERR
+(
+a
+##
+_˛ass
+); \
+
+155 
+a
+##
+_out
+; \
+
+157 
+a
+##
+_˛ass
+->
+dev_uevít
+ = 
+a˛
+; \
+
+159 
+	`cdev_öô
+(&
+a
+##
+_cdev
+, &a##
+_f›s
+); \
+
+161 i‡((
+ªt
+ = 
+	`cdev_add
+(&
+a
+##
+_cdev
+,á##
+_devno
+, 1)) < 0) { \
+
+162 
+	`¥ötk
+(
+KERN_WARNING
+ 
+MODULE_NAME
+": Cannotádd class device: %s!\n", #a); \
+
+163 
+	`˛ass_de°roy
+(
+a
+##
+_˛ass
+); \
+
+164 
+	`uƒegi°î_chrdev_ªgi⁄
+(
+a
+##
+_devno
+, 1); \
+
+165 
+a
+##
+_out
+; \
+
+168 i‡(
+	`IS_ERR
+(
+a
+##
+_dev
+ = 
+	`devi˚_¸óã
+◊##
+_˛ass
+, 
+NULL
+,á##
+_devno
+, NULL, #a))) { \
+
+169 
+	`¥ötk
+(
+KERN_WARNING
+ 
+MODULE_NAME
+": Cannot create device: %s!\n", #a); \
+
+170 
+	`cdev_dñ
+(&
+a
+##
+_cdev
+); \
+
+171 
+	`˛ass_de°roy
+(
+a
+##
+_˛ass
+); \
+
+172 
+	`uƒegi°î_chrdev_ªgi⁄
+(
+a
+##
+_devno
+, 1); \
+
+173 
+ªt
+ = 
+	`PTR_ERR
+(
+a
+##
+_dev
+); \
+
+175 
+a
+##
+_out
+:
+
+	)
+
+177 
+STUB_ENTRIES
+
+
+178 #unde‡
+DEVICE
+
+
+180  
+ªt
+;
+
+181 
+	}
+}
+
+183 
+	$uƒegi°î_devfs_°ubs
+() {
+
+184 i‡(!
+devfs
+) {
+
+188 
+	#DEVICE
+(
+a
+, 
+b
+, 
+c
+, 
+d
+, 
+e
+, 
+f
+, 
+g
+, 
+h
+) \
+
+189 
+	`devi˚_de°roy
+(
+a
+##
+_˛ass
+,á##
+_devno
+); \
+
+190 
+	`cdev_dñ
+(&
+a
+##
+_cdev
+); \
+
+191 
+	`˛ass_de°roy
+(
+a
+##
+_˛ass
+); \
+
+192 
+	`uƒegi°î_chrdev_ªgi⁄
+(
+a
+##
+_devno
+, 1);
+
+	)
+
+194 
+STUB_ENTRIES
+
+
+195 #unde‡
+DEVICE
+
+
+196 
+	}
+}
+
+	@devfs_stubs.h
+
+1 #i‚de‡
+INCLUDE_DEVFS_STUBS_H
+
+
+2 
+	#INCLUDE_DEVFS_STUBS_H
+
+
+	)
+
+4 
+ªgi°î_devfs_°ubs
+();
+
+5 
+uƒegi°î_devfs_°ubs
+();
+
+	@firmadyne.c
+
+1 
+	~<löux/öô.h
+>
+
+2 
+	~<löux/kî√l.h
+>
+
+3 
+	~<löux/moduÀ.h
+>
+
+4 
+	~<löux/moduÀ∑øm.h
+>
+
+5 
+	~<löux/ªboŸ.h
+>
+
+7 
+	~"fúmady√.h
+"
+
+8 
+	~"hooks.h
+"
+
+9 
+	~"devfs_°ubs.h
+"
+
+10 
+	~"¥ocfs_°ubs.h
+"
+
+12 
+MODULE_LICENSE
+("GPL");
+
+13 
+MODULE_AUTHOR
+("Dominic Chen <ddchen@cmu.edu>");
+
+14 
+MODULE_DESCRIPTION
+("FirmwareánalysisándÉmulation support");
+
+15 
+MODULE_VERSION
+("0.1");
+
+17 
+	gdevfs
+ = 1;
+
+18 
+	gexecuã
+ = 1;
+
+19 
+	gªboŸ
+ = 1;
+
+20 
+	g¥ocfs
+ = 1;
+
+21 
+	gsysˇŒ
+ = 255;
+
+23 
+moduÀ_∑øm
+(
+devfs
+, , 0660);
+
+24 
+MODULE_PARM_DESC
+(
+devfs
+, "Enable devfs stub deviceÉmulation");
+
+25 
+moduÀ_∑øm
+(
+execuã
+, , 0660);
+
+26 
+MODULE_PARM_DESC
+(
+execuã
+, "ExecuteÖredefined binaryátÇext binaryÉxecution");
+
+27 
+moduÀ_∑øm
+(
+ªboŸ
+, , 0660);
+
+28 
+MODULE_PARM_DESC
+(
+ªboŸ
+, "EnableÖrevention/simulation of system shutdown/reboot");
+
+29 
+moduÀ_∑øm
+(
+¥ocfs
+, , 0660);
+
+30 
+MODULE_PARM_DESC
+(
+¥ocfs
+, "EnableÖrocfs stub deviceÉmulation");
+
+31 
+moduÀ_∑øm
+(
+sysˇŒ
+, , 0660);
+
+32 
+MODULE_PARM_DESC
+(
+sysˇŒ
+, "Loglevel bitmask for interceptionándÖrinting of system calls");
+
+34 
+	$ªboŸ_nŸify
+(
+nŸifõr_block
+ *
+nb
+, 
+code
+, *
+unu£d
+) {
+
+35 
+	`uƒegi°î_¥obes
+();
+
+37  
+NOTIFY_DONE
+;
+
+38 
+	}
+}
+
+40 
+nŸifõr_block
+ 
+	gªboŸ_cb
+ = {
+
+41 .
+nŸifõr_ˇŒ
+ = 
+ªboŸ_nŸify
+,
+
+44 
+__öô
+ 
+	$öô_moduÀ
+() {
+
+45 
+ªt
+ = 0, 
+tmp
+ = 0;
+
+47 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": devfs: %d,Éxecuã: %d,Örocfs: %d, sysˇŒ: %d\n", 
+devfs
+, 
+execuã
+, 
+¥ocfs
+, 
+sysˇŒ
+);
+
+49 i‡((
+tmp
+ = 
+	`ªgi°î_devfs_°ubs
+()) < 0) {
+
+50 
+	`¥ötk
+(
+KERN_WARNING
+ 
+MODULE_NAME
+":Ñegi°î_devfs_°ubs(Ë%d\n", 
+tmp
+);
+
+51 
+ªt
+ = 
+tmp
+;
+
+55 i‡((
+tmp
+ = 
+	`ªgi°î_¥obes
+()) < 0) {
+
+56 
+	`¥ötk
+(
+KERN_WARNING
+ 
+MODULE_NAME
+":Ñegi°î_¥obes(Ë%d\n", 
+tmp
+);
+
+57 
+ªt
+ = 
+tmp
+;
+
+60 i‡((
+tmp
+ = 
+	`ªgi°î_¥ocfs_°ubs
+()) < 0) {
+
+61 
+	`¥ötk
+(
+KERN_WARNING
+ 
+MODULE_NAME
+":Ñegi°î_¥ocfs_°ubs(Ë%d\n", 
+tmp
+);
+
+62 
+ªt
+ = 
+tmp
+;
+
+65 
+	`ªgi°î_ªboŸ_nŸifõr
+(&
+ªboŸ_cb
+);
+
+67  
+ªt
+;
+
+68 
+	}
+}
+
+70 
+__exô
+ 
+	$˛ónup_moduÀ
+() {
+
+71 
+	`uƒegi°î_devfs_°ubs
+();
+
+72 
+	`uƒegi°î_¥obes
+();
+
+73 
+	`uƒegi°î_¥ocfs_°ubs
+();
+
+75 
+	`uƒegi°î_ªboŸ_nŸifõr
+(&
+ªboŸ_cb
+);
+
+76 
+	}
+}
+
+78 
+moduÀ_öô
+(
+öô_moduÀ
+);
+
+79 
+moduÀ_exô
+(
+˛ónup_moduÀ
+);
+
+	@firmadyne.h
+
+1 #i‚de‡
+INCLUDE_FIRMADYNE_H
+
+
+2 
+	#INCLUDE_FIRMADYNE_H
+
+
+	)
+
+4 
+devfs
+;
+
+5 
+execuã
+;
+
+6 
+ªboŸ
+;
+
+7 
+¥ocfs
+;
+
+8 
+sysˇŒ
+;
+
+10 
+	#MODULE_NAME
+ "fúmady√"
+
+	)
+
+	@hooks-private.h
+
+1 #i‚de‡
+INCLUDE_PRIVATE_H
+
+
+2 
+	#INCLUDE_PRIVATE_H
+
+
+	)
+
+5 
+	s√t_bridge
+ {
+
+6 
+•ölock_t
+ 
+	mlock
+;
+
+7 
+li°_hód
+ 
+	mp‹t_li°
+;
+
+8 
+√t_devi˚
+ *
+	mdev
+;
+
+12 
+	$cou¡
+(c⁄° 
+__u£r
+ * c⁄° __u£∏*
+¨gv
+, 
+max
+) {
+
+13 
+i
+ = 0;
+
+15 i‡(
+¨gv
+ !
+NULL
+) {
+
+17 c⁄° 
+__u£r
+ *
+p
+;
+
+19 i‡(
+	`gë_u£r
+(
+p
+, 
+¨gv
+))
+
+20  -
+EFAULT
+;
+
+21 i‡(!
+p
+)
+
+23 
+¨gv
+++;
+
+24 i‡(
+i
+++ >
+max
+)
+
+25  -
+E2BIG
+;
+
+27 i‡(
+	`Áèl_sig«l_≥ndög
+(
+cuºít
+))
+
+28  -
+ERESTARTNOHAND
+;
+
+30 
+	`c⁄d_ªsched
+();
+
+33  
+i
+;
+
+34 
+	}
+}
+
+	@hooks.c
+
+1 
+	~<löux/böfmts.h
+>
+
+2 
+	~<löux/ˇ∑bûôy.h
+>
+
+3 
+	~<löux/fs.h
+>
+
+4 
+	~<löux/kmod.h
+>
+
+5 
+	~<löux/k¥obes.h
+>
+
+6 
+	~<löux/mm™.h
+>
+
+7 
+	~<löux/if_vœn.h
+>
+
+8 
+	~<löux/öëdevi˚.h
+>
+
+9 
+	~<löux/√t.h
+>
+
+10 
+	~<löux/√éök.h
+>
+
+11 
+	~<löux/ªboŸ.h
+>
+
+12 
+	~<löux/£curôy.h
+>
+
+13 
+	~<löux/sockë.h
+>
+
+14 
+	~<√t/öë_sock.h
+>
+
+16 
+	~"fúmady√.h
+"
+
+17 
+	~"hooks.h
+"
+
+18 
+	~"hooks-¥iv©e.h
+"
+
+21 
+	#LEVEL_NETWORK
+ (1 << 0)
+
+	)
+
+23 
+	#LEVEL_SYSTEM
+ (1 << 1)
+
+	)
+
+25 
+	#LEVEL_FS_W
+ (1 << 2)
+
+	)
+
+27 
+	#LEVEL_FS_R
+ (1 << 3)
+
+	)
+
+29 
+	#LEVEL_EXEC
+ (1 << 4)
+
+	)
+
+31 
+	#SYSCALL_HOOKS
+ \
+
+33 
+	`HOOK
+("öë_böd", 
+böd_hook
+, 
+böd_¥obe
+) \
+
+35 
+	`HOOK
+("öë_ac˚±", 
+ac˚±_hook
+, 
+ac˚±_¥obe
+) \
+
+37 
+	`HOOK
+("ªgi°î_vœn_dev", 
+vœn_hook
+, 
+vœn_¥obe
+) \
+
+39 
+	`HOOK
+("__öë_ö£π_iÁ", 
+öë_hook
+, 
+öë_¥obe
+) \
+
+41 
+	`HOOK
+("br_add_if", 
+br_hook
+, 
+br_¥obe
+) \
+
+43 
+	`HOOK
+("sys_sockë", 
+sockë_hook
+, 
+sockë_¥obe
+) \
+
+45 
+	`HOOK
+("sys_£tsock›t", 
+£tsock›t_hook
+, 
+£tsock›t_¥obe
+) \
+
+48 
+	`HOOK
+("do_mou¡", 
+mou¡_hook
+, 
+mou¡_¥obe
+) \
+
+50 
+	`HOOK
+("vfs_mknod", 
+mknod_hook
+, 
+mknod_¥obe
+) \
+
+52 
+	`HOOK
+("vfs_u∆ök", 
+u∆ök_hook
+, 
+u∆ök_¥obe
+) \
+
+54 
+	`HOOK
+("do_vfs_io˘l", 
+io˘l_hook
+, 
+io˘l_¥obe
+) \
+
+56 
+	`HOOK
+("sys_ªboŸ", 
+ªboŸ_hook
+, 
+ªboŸ_¥obe
+) \
+
+59 
+	`HOOK
+("do_sys_›í", 
+›í_hook
+, 
+›í_¥obe
+) \
+
+62 
+	`HOOK
+("sys_˛o£", 
+˛o£_hook
+, 
+˛o£_¥obe
+) \
+
+65 
+	`HOOK
+("do_execve", 
+execve_hook
+, 
+execve_¥obe
+) \
+
+67 
+	`HOOK
+("do_f‹k", 
+f‹k_hook
+, 
+f‹k_¥obe
+) \
+
+68 
+	`HOOK_RET
+("do_f‹k", 
+NULL
+, 
+f‹k_ªt_hook
+, 
+f‹k_ªt_¥obe
+) \
+
+70 
+	`HOOK
+("do_exô", 
+exô_hook
+, 
+exô_¥obe
+) \
+
+72 
+	`HOOK
+("do_£nd_sig_öfo", 
+sig«l_hook
+, 
+sig«l_¥obe
+) \
+
+75 
+	`HOOK
+("mm≠_ªgi⁄", 
+mm≠_hook
+, 
+mm≠_¥obe
+)
+
+	)
+
+77 *
+	gívp_öô
+[] = { "HOME=/", "TERMˆöux", "LD_PRELOAD=/fúmady√/libnvøm.so", 
+NULL
+ };
+
+79 
+	$sockë_hook
+(
+Ámûy
+, 
+ty≥
+, 
+¥Ÿocﬁ
+) {
+
+80 i‡(
+sysˇŒ
+ & 
+LEVEL_NETWORK
+) {
+
+81 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": sys_sockë[PID: %d (%s)]: famûy:%d,Åy≥:%d,ÖrŸocﬁ:%d\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+Ámûy
+, 
+ty≥
+, 
+¥Ÿocﬁ
+);
+
+84 
+	`j¥obe_ªtu∫
+();
+
+85 
+	}
+}
+
+87 
+	$£tsock›t_hook
+(
+fd
+, 
+Àvñ
+, 
+›äame
+, 
+__u£r
+ *
+›tvÆ
+, 
+›éí
+) {
+
+88 i‡(
+sysˇŒ
+ & 
+LEVEL_NETWORK
+) {
+
+89 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": sys_£tsock›t[PID: %d (%s)]: fd:%d,Üevñ:%d, o±«me:%d\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+fd
+, 
+Àvñ
+, 
+›äame
+);
+
+92 
+	`j¥obe_ªtu∫
+();
+
+93 
+	}
+}
+
+95 
+	$ªboŸ_hook
+(
+magic1
+, 
+magic2
+, 
+cmd
+, 
+__u£r
+ *
+¨g
+) {
+
+96 *
+¨gv_öô
+[] = { "/sbö/öô", 
+NULL
+ };
+
+97 
+kî√l_ˇp_t
+ 
+pE
+, 
+pP
+, 
+pI
+;
+
+98 
+¸ed
+ *
+√w
+;
+
+100 i‡(
+ªboŸ
+ || 
+sysˇŒ
+ & 
+LEVEL_SYSTEM
+) {
+
+101 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": sys_ªboŸ[PID: %d (%s)]: magic1:%x, magic2:%x, cmd:%x\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+magic1
+, 
+magic2
+, 
+cmd
+);
+
+104 i‡(
+ªboŸ
+ && 
+cmd
+ !
+LINUX_REBOOT_CMD_CAD_OFF
+ && cmd !
+LINUX_REBOOT_CMD_CAD_ON
+) {
+
+105 i‡(
+	`£curôy_ˇpgë
+(
+cuºít
+, &
+pE
+, &
+pI
+, &
+pP
+)) {
+
+106 
+	`¥ötk
+(
+KERN_WARNING
+ 
+MODULE_NAME
+": security_capget() failed!\n");
+
+107 
+out
+;
+
+110 i‡(!(
+√w
+ = 
+	`¥ï¨e_¸eds
+())) {
+
+111 
+	`¥ötk
+(
+KERN_WARNING
+ 
+MODULE_NAME
+":Örepare_creds() failed!\n");
+
+112 
+out
+;
+
+115 
+	`ˇp_lowî
+(
+pE
+, 
+CAP_SYS_BOOT
+);
+
+116 
+	`ˇp_lowî
+(
+pI
+, 
+CAP_SYS_BOOT
+);
+
+117 
+	`ˇp_lowî
+(
+pP
+, 
+CAP_SYS_BOOT
+);
+
+119 i‡(
+	`£curôy_ˇp£t
+(
+√w
+, 
+	`cuºít_¸ed
+(), &
+pE
+, &
+pI
+, &
+pP
+)) {
+
+120 
+	`¥ötk
+(
+KERN_WARNING
+ 
+MODULE_NAME
+": security_capset() failed!\n");
+
+121 
+	`ab‹t_¸eds
+(
+√w
+);
+
+122 
+out
+;
+
+125 
+	`commô_¸eds
+(
+√w
+);
+
+126 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": sys_reboot:Ñemoved CAP_SYS_BOOT, starting init...\n");
+
+128 
+	`ˇŒ_u£rmodehñ≥r
+(
+¨gv_öô
+[0],árgv_öô, 
+ívp_öô
+, 
+UMH_NO_WAIT
+);
+
+131 
+out
+:
+
+132 
+	`j¥obe_ªtu∫
+();
+
+133 
+	}
+}
+
+135 
+	$mou¡_hook
+(*
+dev_«me
+, *
+dú_«me
+, * 
+ty≥_∑ge
+, 
+Êags
+, *
+d©a_∑ge
+) {
+
+136 i‡(
+sysˇŒ
+ & 
+LEVEL_SYSTEM
+) {
+
+137 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": do_mou¡[PID: %d (%s)]: mou¡poöt:%s, devi˚:%s,Åy≥:%s\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+dú_«me
+, 
+dev_«me
+, 
+ty≥_∑ge
+);
+
+140 
+	`j¥obe_ªtu∫
+();
+
+141 
+	}
+}
+
+143 
+	$io˘l_hook
+(
+fûe
+ *
+fûp
+, 
+fd
+, 
+cmd
+, 
+¨g
+) {
+
+144 i‡(
+sysˇŒ
+ & 
+LEVEL_SYSTEM
+) {
+
+145 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": vfs_io˘l[PID: %d (%s)]: fd:%d cmd:0x%x\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+fd
+, 
+cmd
+);
+
+151 
+	`j¥obe_ªtu∫
+();
+
+152 
+	}
+}
+
+154 
+	$u∆ök_hook
+(
+öode
+ *
+dú
+, 
+díåy
+ *dentry) {
+
+155 i‡(
+sysˇŒ
+ & 
+LEVEL_FS_W
+) {
+
+156 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": vfs_u∆ök[PID: %d (%s)]: fûe:%s\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+díåy
+->
+d_«me
+.
+«me
+);
+
+159 
+	`j¥obe_ªtu∫
+();
+
+160 
+	}
+}
+
+162 
+	$sig«l_hook
+(
+sig
+, 
+sigöfo
+ *
+öfo
+, 
+èsk_°ru˘
+ *
+p
+, 
+boﬁ
+ 
+group
+) {
+
+163 i‡(
+sysˇŒ
+ & 
+LEVEL_EXEC
+) {
+
+164 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": do_£nd_sig_öfo[PID: %d (%s)]: PID:%d, sig«l:%u\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+p
+->
+pid
+, 
+sig
+);
+
+167 
+	`j¥obe_ªtu∫
+();
+
+168 
+	}
+}
+
+170 
+	$vœn_hook
+(
+√t_devi˚
+ *
+dev
+) {
+
+171 i‡(
+sysˇŒ
+ & 
+LEVEL_NETWORK
+) {
+
+172 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+":Ñegi°î_vœn_dev[PID: %d (%s)]: dev:%†vœn_id:%d\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+dev
+->
+«me
+, 
+	`vœn_dev_vœn_id
+(dev));
+
+176 
+	`j¥obe_ªtu∫
+();
+
+177 
+	}
+}
+
+179 
+	$böd_hook
+(
+sockë
+ *
+sock
+, 
+sockaddr
+ *
+uaddr
+, 
+addr_Àn
+) {
+
+180 i‡(
+sysˇŒ
+ & 
+LEVEL_NETWORK
+) {
+
+181 
+•‹t
+ = 
+	`ht⁄s
+(((
+sockaddr_ö
+ *)
+uaddr
+)->
+sö_p‹t
+);
+
+182 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": i√t_böd[PID: %d (%s)]:ÖrŸo:%s,Ö‹t:%d\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+sock
+->
+ty≥
+ =
+SOCK_STREAM
+ ? "SOCK_STREAM" : (sock->ty≥ =
+SOCK_DGRAM
+ ? "SOCK_DGRAM" : "SOCK_OTHER"), 
+•‹t
+);
+
+185 
+	`j¥obe_ªtu∫
+();
+
+186 
+	}
+}
+
+188 
+	$ac˚±_hook
+(
+sockë
+ *
+sock
+, sockë *
+√wsock
+, 
+Êags
+) {
+
+189 i‡(
+sysˇŒ
+ & 
+LEVEL_NETWORK
+) {
+
+190 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": i√t_ac˚±[PID: %d (%s)]:\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+);
+
+192 
+	`j¥obe_ªtu∫
+();
+
+193 
+	}
+}
+
+195 
+	$mm≠_hook
+(
+fûe
+ *fûe, 
+addr
+, 
+Àn
+, 
+vm_Êags
+, 
+pgoff
+) {
+
+196 i‡(
+sysˇŒ
+ & 
+LEVEL_EXEC
+ && (
+vm_Êags
+ & 
+VM_EXEC
+)) {
+
+197 i‡(
+fûe
+ && fûe->
+f_∑th
+.
+díåy
+) {
+
+198 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": mm≠_ªgi⁄[PID: %d (%s)]:áddr:0x%lx -> 0x%lx, fûe:%s\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+addr
+,áddr+
+Àn
+, 
+fûe
+->
+f_∑th
+.
+díåy
+->
+d_«me
+.
+«me
+);
+
+201 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": mm≠_ªgi⁄[PID: %d (%s)]:áddr:0x%lx -> 0x%lx\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+addr
+,áddr+
+Àn
+);
+
+205 
+	`j¥obe_ªtu∫
+();
+
+206 
+	}
+}
+
+208 
+	$exô_hook
+(
+code
+) {
+
+209 i‡(
+sysˇŒ
+ & 
+LEVEL_EXEC
+ && 
+	`°rcmp
+("khñ≥r", 
+cuºít
+->
+comm
+)) {
+
+210 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": do_exô[PID: %d (%s)]: code:%lu\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+code
+);
+
+213 
+	`j¥obe_ªtu∫
+();
+
+214 
+	}
+}
+
+216 
+	$f‹k_hook
+(
+˛⁄e_Êags
+, 
+°ack_°¨t
+, 
+±_ªgs
+ *
+ªgs
+, 
+°ack_size
+, 
+__u£r
+ *
+∑ª¡_tid±r
+, __u£∏*
+chûd_tid±r
+) {
+
+217 i‡(
+sysˇŒ
+ & 
+LEVEL_EXEC
+ && 
+	`°rcmp
+("khñ≥r", 
+cuºít
+->
+comm
+)) {
+
+218 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": do_f‹k[PID: %d (%s)]: cl⁄e_Êags:0x%lx, sèck_size:0x%lx\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+˛⁄e_Êags
+, 
+°ack_size
+);
+
+221 
+	`j¥obe_ªtu∫
+();
+
+222 
+	}
+}
+
+224 
+	$f‹k_ªt_hook
+(
+kªçrobe_ö°™˚
+ *
+ri
+, 
+±_ªgs
+ *
+ªgs
+) {
+
+225 i‡(
+sysˇŒ
+ & 
+LEVEL_EXEC
+ && 
+	`°rcmp
+("khñ≥r", 
+cuºít
+->
+comm
+)) {
+
+226 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": do_f‹k_ªt[PID: %d (%s)] = %ld\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+	`ªgs_ªtu∫_vÆue
+(
+ªgs
+));
+
+230 
+	}
+}
+
+232 
+	$˛o£_hook
+(
+fd
+) {
+
+233 i‡(
+sysˇŒ
+ & 
+LEVEL_FS_R
+) {
+
+234 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": clo£[PID: %d (%s)]: fd:%d\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+fd
+);
+
+237 
+	`j¥obe_ªtu∫
+();
+
+238 
+	}
+}
+
+240 
+	$›í_ªt_hook
+(
+kªçrobe_ö°™˚
+ *
+ri
+, 
+±_ªgs
+ *
+ªgs
+) {
+
+241 i‡(
+sysˇŒ
+ & 
+LEVEL_FS_R
+) {
+
+242 
+	`¥ötk
+(
+KERN_CONT
+ ": clo£[PID: %d (%s)] = %ld\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+	`ªgs_ªtu∫_vÆue
+(
+ªgs
+));
+
+246 
+	}
+}
+
+248 
+	$›í_hook
+(
+dfd
+, c⁄° 
+__u£r
+ *
+fûíame
+, 
+Êags
+, 
+mode
+) {
+
+249 i‡(
+sysˇŒ
+ & 
+LEVEL_FS_R
+) {
+
+250 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": o≥n[PID: %d (%s)]: fûe:%s\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+fûíame
+);
+
+253 
+	`j¥obe_ªtu∫
+();
+
+254 
+	}
+}
+
+256 
+	$execve_hook
+(*
+fûíame
+, c⁄° 
+__u£r
+ *c⁄° __u£∏*
+¨gv
+, c⁄° __u£∏*c⁄° __u£∏*
+ívp
+, 
+±_ªgs
+ *
+ªgs
+) {
+
+257 
+i
+;
+
+258 *
+¨gv_öô
+[] = { "/fúmady√/c⁄sﬁe", 
+NULL
+ };
+
+260 i‡(
+execuã
+ > 5) {
+
+261 
+execuã
+ = 0;
+
+263 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": do_execve: %s\n", 
+¨gv_öô
+[0]);
+
+264 
+	`ˇŒ_u£rmodehñ≥r
+(
+¨gv_öô
+[0],árgv_öô, 
+ívp_öô
+, 
+UMH_NO_WAIT
+);
+
+266 
+	`¥ötk
+(
+KERN_WARNING
+ "OFFSETS: off£ào‡pid: 0x%x off£ào‡comm: 0x%x\n", 
+	`off£tof
+(
+èsk_°ru˘
+, 
+pid
+), off£tof(èsk_°ru˘, 
+comm
+));
+
+268 i‡(
+execuã
+ > 0) {
+
+269 
+execuã
+ += 1;
+
+272 i‡(
+sysˇŒ
+ & 
+LEVEL_SYSTEM
+ && 
+	`°rcmp
+("khñ≥r", 
+cuºít
+->
+comm
+)) {
+
+273 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": do_execve[PID: %d (%s)]:árgv:", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+);
+
+274 
+i
+ = 0; i >0 && i < 
+	`cou¡
+(
+¨gv
+, 
+MAX_ARG_STRINGS
+); i++) {
+
+275 
+	`¥ötk
+(
+KERN_CONT
+ " %s", 
+¨gv
+[
+i
+]);
+
+278 
+	`¥ötk
+(
+KERN_CONT
+ ",Énvp:");
+
+279 
+i
+ = 0; i >0 && i < 
+	`cou¡
+(
+ívp
+, 
+MAX_ARG_STRINGS
+); i++) {
+
+280 
+	`¥ötk
+(
+KERN_CONT
+ " %s", 
+ívp
+[
+i
+]);
+
+284 
+	`j¥obe_ªtu∫
+();
+
+285 
+	}
+}
+
+287 
+	$mknod_hook
+(
+öode
+ *
+dú
+, 
+díåy
+ *díåy, 
+umode_t
+ 
+mode
+, 
+dev_t
+ 
+dev
+) {
+
+288 i‡(
+sysˇŒ
+ & 
+LEVEL_FS_W
+) {
+
+289 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": vfs_mknod[PID: %d (%s)]: fûe:%†maj‹:%d mö‹:%d\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+díåy
+->
+d_«me
+.
+«me
+, 
+	`MAJOR
+(
+dev
+), 
+	`MINOR
+(dev));
+
+292 
+	`j¥obe_ªtu∫
+();
+
+293 
+	}
+}
+
+295 
+	$br_hook
+(
+√t_bridge
+ *
+br
+, 
+√t_devi˚
+ *
+dev
+) {
+
+296 i‡(
+sysˇŒ
+ & 
+LEVEL_NETWORK
+) {
+
+297 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": br_add_if[PID: %d (%s)]: br:%†dev:%s\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+br
+->
+dev
+->
+«me
+, dev->name);
+
+300 
+	`j¥obe_ªtu∫
+();
+
+301 
+	}
+}
+
+303 
+	$öë_hook
+(
+ö_iÁddr
+ *
+iÁ
+, 
+∆msghdr
+ *
+∆h
+, 
+u32
+ 
+pid
+) {
+
+304 i‡(
+sysˇŒ
+ & 
+LEVEL_NETWORK
+) {
+
+305 
+	`¥ötk
+(
+KERN_INFO
+ 
+MODULE_NAME
+": __öë_ö£π_iÁ[PID: %d (%s)]: devi˚:%†iÁ:0x%08x\n", 
+	`èsk_pid_ƒ
+(
+cuºít
+), cuºít->
+comm
+, 
+iÁ
+->
+iÁ_dev
+->
+dev
+->
+«me
+, iÁ->
+iÁ_addªss
+);
+
+308 
+	`j¥obe_ªtu∫
+();
+
+309 
+	}
+}
+
+311 
+	#HOOK_RET
+(
+a
+, 
+b
+, 
+c
+, 
+d
+) \
+
+312 
+kªçrobe
+ 
+d
+ = { \
+
+313 .
+íåy_h™dÀr
+ = 
+b
+, \
+
+314 .
+h™dÀr
+ = 
+c
+, \
+
+315 .
+kp
+ = { \
+
+316 .
+symbﬁ_«me
+ = 
+a
+, \
+
+318 .
+maxa˘ive
+ = 2*
+NR_CPUS
+, \
+
+319 };
+
+	)
+
+321 
+	#HOOK
+(
+a
+, 
+b
+, 
+c
+) \
+
+322 
+j¥obe
+ 
+c
+ = { \
+
+323 .
+íåy
+ = 
+b
+, \
+
+324 .
+kp
+ = { \
+
+325 .
+symbﬁ_«me
+ = 
+a
+, \
+
+327 };
+
+	)
+
+329 
+	gSYSCALL_HOOKS
+
+
+330 #unde‡
+HOOK
+
+
+331 #unde‡
+HOOK_RET
+
+
+333 
+	$ªgi°î_¥obes
+() {
+
+334 
+ªt
+ = 0, 
+tmp
+;
+
+336 
+	#HOOK_RET
+(
+a
+, 
+b
+, 
+c
+, 
+d
+) \
+
+337 i‡((
+tmp
+ = 
+	`ªgi°î_kªçrobe
+(&
+d
+)) < 0) { \
+
+338 
+	`¥ötk
+(
+KERN_WARNING
+ 
+MODULE_NAME
+":Ñegi°î kªçrobe: %†%d\n", 
+d
+.
+kp
+.
+symbﬁ_«me
+, 
+tmp
+); \
+
+339 
+ªt
+ = 
+tmp
+; \
+
+340 }
+
+	)
+
+342 
+	#HOOK
+(
+a
+, 
+b
+, 
+c
+) \
+
+343 i‡((
+tmp
+ = 
+	`ªgi°î_j¥obe
+(&
+c
+)) < 0) { \
+
+344 
+	`¥ötk
+(
+KERN_WARNING
+ 
+MODULE_NAME
+":Ñegi°î j¥obe: %†%d\n", 
+c
+.
+kp
+.
+symbﬁ_«me
+, 
+tmp
+); \
+
+345 
+ªt
+ = 
+tmp
+; \
+
+346 }
+
+	)
+
+348 
+SYSCALL_HOOKS
+
+
+349 #unde‡
+HOOK
+
+
+350 #unde‡
+HOOK_RET
+
+
+352  
+ªt
+;
+
+353 
+	}
+}
+
+355 
+	$uƒegi°î_¥obes
+() {
+
+356 
+	#HOOK_RET
+(
+a
+, 
+b
+, 
+c
+, 
+d
+) \
+
+357 
+	`uƒegi°î_kªçrobe
+(&
+d
+);
+
+	)
+
+359 
+	#HOOK
+(
+a
+, 
+b
+, 
+c
+) \
+
+360 
+	`uƒegi°î_j¥obe
+(&
+c
+);
+
+	)
+
+362 
+SYSCALL_HOOKS
+
+
+363 #unde‡
+HOOK
+
+
+364 #unde‡
+HOOK_RET
+
+
+365 
+	}
+}
+
+	@hooks.h
+
+1 #i‚de‡
+INCLUDE_HOOKS_H
+
+
+2 
+	#INCLUDE_HOOKS_H
+
+
+	)
+
+4 
+ªgi°î_¥obes
+();
+
+5 
+uƒegi°î_¥obes
+();
+
+	@procfs_stubs.c
+
+1 
+	~<löux/fs.h
+>
+
+2 
+	~<löux/kî√l.h
+>
+
+3 
+	~<löux/¥oc_fs.h
+>
+
+4 
+	~<löux/uac˚ss.h
+>
+
+6 
+	~"¥ocfs_°ubs.h
+"
+
+7 
+	~"fúmady√.h
+"
+
+9 
+	#STUB_ENTRIES
+ \
+
+10 
+	`FILE
+(
+bœnk°©us
+, 
+ªad
+, 
+wrôe
+, 
+NULL
+) \
+
+11 
+	`FILE
+(
+bäC¡
+, 
+ªad
+, 
+wrôe
+, 
+NULL
+) \
+
+12 
+	`FILE
+(
+br_igmpProxy
+, 
+ªad
+, 
+wrôe
+, 
+NULL
+) \
+
+13 
+	`FILE
+(
+BäMode
+, 
+ªad
+, 
+wrôe
+, 
+NULL
+) \
+
+14 
+	`FILE
+(
+gpio
+, 
+ªad
+, 
+wrôe
+, 
+NULL
+) \
+
+15 
+	`FILE
+(
+Àd
+, 
+ªad
+, 
+wrôe
+, 
+NULL
+) \
+
+17 
+	`FILE
+(
+push_buâ⁄
+, 
+ªad
+, 
+wrôe
+, 
+NULL
+) \
+
+18 
+	`FILE
+(
+πk_¥omiscuous
+, 
+ªad
+, 
+wrôe
+, 
+NULL
+) \
+
+19 
+	`FILE
+(
+πk_vœn_suµ‹t
+, 
+ªad
+, 
+wrôe
+, 
+NULL
+) \
+
+20 
+	`FILE
+(
+R°BäC¡
+, 
+ªad
+, 
+wrôe
+, 
+NULL
+) \
+
+21 
+	`FILE
+(
+sw_«t
+, 
+ªad
+, 
+wrôe
+, 
+NULL
+) \
+
+22 
+	`DIR
+(
+sim∂e_c⁄fig
+, 
+NULL
+) \
+
+23 
+	`FILE
+(
+ª£t_buâ⁄_s
+, 
+ªad
+, 
+wrôe
+, 
+sim∂e_c⁄fig_dú
+) \
+
+24 
+	`DIR
+(
+qu™tum
+, 
+NULL
+) \
+
+25 
+	`FILE
+(
+drv_˘l
+, 
+ªad
+, 
+wrôe
+, 
+qu™tum_dú
+) \
+
+26 
+	`DIR
+(
+π3052
+, 
+NULL
+) \
+
+27 
+	`DIR
+(
+mii
+, 
+π3052_dú
+) \
+
+28 
+	`FILE
+(
+˘æ
+, 
+ªad
+, 
+wrôe
+, 
+mii_dú
+) \
+
+29 
+	`FILE
+(
+d©a
+, 
+ªad
+, 
+wrôe
+, 
+mii_dú
+)
+
+	)
+
+31 
+ssize_t
+ 
+	$ªad
+(
+fûe
+ *fûe, 
+__u£r
+ *
+buf
+, 
+size_t
+ 
+size
+, 
+loff_t
+ *
+off£t
+) {
+
+32 c⁄° 
+d©a
+[] = "0";
+
+33 
+loff_t
+ 
+cou¡
+ = 
+	`mö
+(÷off_tË
+size
+, 
+	`ARRAY_SIZE
+(
+d©a
+Ë- *
+off£t
+);
+
+35 i‡(!
+devfs
+) {
+
+36  -
+EINVAL
+;
+
+39 i‡(*
+off£t
+ >
+	`ARRAY_SIZE
+(
+d©a
+)) {
+
+43 i‡(
+	`c›y_to_u£r
+(
+buf
+, 
+d©a
+ + *
+off£t
+, 
+cou¡
+)) {
+
+44  -
+EFAULT
+;
+
+47 *
+off£t
+ +
+cou¡
+;
+
+48  
+cou¡
+;
+
+49 
+	}
+}
+
+51 
+ssize_t
+ 
+	$wrôe
+(
+fûe
+ *fûe, c⁄° 
+__u£r
+ *
+buf
+, 
+size_t
+ 
+size
+, 
+loff_t
+ *
+off£t
+) {
+
+52 i‡(!
+¥ocfs
+) {
+
+53  -
+EINVAL
+;
+
+56  
+size
+;
+
+57 
+	}
+}
+
+59 
+	#DIR
+(
+a
+, 
+b
+) \
+
+60 
+¥oc_dú_íåy
+ *
+a
+##
+_dú
+;
+
+	)
+
+62 
+	#FILE
+(
+a
+, 
+b
+, 
+c
+, 
+d
+) \
+
+63 c⁄° 
+fûe_›î©i⁄s
+ 
+a
+##
+_f›s
+ = { \
+
+64 .
+ªad
+ = 
+b
+, \
+
+65 .
+wrôe
+ = 
+c
+, \
+
+66 };
+
+	)
+
+68 
+	gSTUB_ENTRIES
+
+
+69 #unde‡
+FILE
+
+
+70 #unde‡
+DIR
+
+
+72 
+	$ªgi°î_¥ocfs_°ubs
+() {
+
+73 
+ªt
+ = 0;
+
+75 i‡(!
+¥ocfs
+) {
+
+76  -
+EINVAL
+;
+
+79 
+	#DIR
+(
+a
+, 
+b
+) \
+
+80 i‡(!(
+a
+##
+_dú
+ = 
+	`¥oc_mkdú
+(#a, 
+b
+))) { \
+
+81 
+	`¥ötk
+(
+KERN_WARNING
+ 
+MODULE_NAME
+": CannotÑegisterÖrocfs directory: %s!\n", #a); \
+
+82 
+ªt
+ = -1; \
+
+83 }
+
+	)
+
+85 
+	#FILE
+(
+a
+, 
+b
+, 
+c
+, 
+d
+) \
+
+86 i‡(!
+	`¥oc_¸óã_d©a
+(#a, 0666, 
+d
+, &
+a
+##
+_f›s
+, 
+NULL
+)) { \
+
+87 
+	`¥ötk
+(
+KERN_WARNING
+ 
+MODULE_NAME
+": CannotÑegisterÖrocfs file: %s!\n", #a); \
+
+88 
+ªt
+ = -1; \
+
+89 }
+
+	)
+
+92 
+STUB_ENTRIES
+
+
+93 #unde‡
+FILE
+
+
+94 #unde‡
+DIR
+
+
+96  
+ªt
+;
+
+97 
+	}
+}
+
+99 
+	$uƒegi°î_¥ocfs_°ubs
+() {
+
+100 i‡(!
+¥ocfs
+) {
+
+104 
+	#DIR
+(
+a
+, 
+b
+) \
+
+105 
+	`ªmove_¥oc_íåy
+(#a, 
+b
+);
+
+	)
+
+107 
+	#FILE
+(
+a
+, 
+b
+, 
+c
+, 
+d
+) \
+
+108 
+	`ªmove_¥oc_íåy
+(#a, 
+d
+);
+
+	)
+
+110 
+STUB_ENTRIES
+
+
+111 #unde‡
+FILE
+
+
+112 #unde‡
+DIR
+
+
+113 
+	}
+}
+
+	@procfs_stubs.h
+
+1 #i‚de‡
+INCLUDE_PROCFS_STUBS_H
+
+
+2 
+	#INCLUDE_PROCFS_STUBS_H
+
+
+	)
+
+4 
+ªgi°î_¥ocfs_°ubs
+();
+
+5 
+uƒegi°î_¥ocfs_°ubs
+();
+
+	@/usr/include/linux/binfmts.h
+
+1 #i‚de‡
+_LINUX_BINFMTS_H
+
+
+2 
+	#_LINUX_BINFMTS_H
+
+
+	)
+
+4 
+	~<löux/ˇ∑bûôy.h
+>
+
+6 
+	g±_ªgs
+;
+
+14 
+	#MAX_ARG_STRLEN
+ (
+PAGE_SIZE
+ * 32)
+
+	)
+
+15 
+	#MAX_ARG_STRINGS
+ 0x7FFFFFFF
+
+	)
+
+18 
+	#BINPRM_BUF_SIZE
+ 128
+
+	)
+
+	@/usr/include/linux/capability.h
+
+13 #i‚de‡
+_LINUX_CAPABILITY_H
+
+
+14 
+	#_LINUX_CAPABILITY_H
+
+
+	)
+
+16 
+	~<löux/ty≥s.h
+>
+
+29 
+	#_LINUX_CAPABILITY_VERSION_1
+ 0x19980330
+
+	)
+
+30 
+	#_LINUX_CAPABILITY_U32S_1
+ 1
+
+	)
+
+32 
+	#_LINUX_CAPABILITY_VERSION_2
+ 0x20071026
+
+	)
+
+33 
+	#_LINUX_CAPABILITY_U32S_2
+ 2
+
+	)
+
+35 
+	#_LINUX_CAPABILITY_VERSION_3
+ 0x20080522
+
+	)
+
+36 
+	#_LINUX_CAPABILITY_U32S_3
+ 2
+
+	)
+
+38 
+	s__u£r_ˇp_hódî_°ru˘
+ {
+
+39 
+__u32
+ 
+	mvîsi⁄
+;
+
+40 
+	mpid
+;
+
+41 } *
+	tˇp_u£r_hódî_t
+;
+
+43 
+	s__u£r_ˇp_d©a_°ru˘
+ {
+
+44 
+__u32
+ 
+	mef„˘ive
+;
+
+45 
+__u32
+ 
+	m≥rmôãd
+;
+
+46 
+__u32
+ 
+	möhîôabÀ
+;
+
+47 } *
+	tˇp_u£r_d©a_t
+;
+
+50 
+	#VFS_CAP_REVISION_MASK
+ 0xFF000000
+
+	)
+
+51 
+	#VFS_CAP_REVISION_SHIFT
+ 24
+
+	)
+
+52 
+	#VFS_CAP_FLAGS_MASK
+ ~
+VFS_CAP_REVISION_MASK
+
+
+	)
+
+53 
+	#VFS_CAP_FLAGS_EFFECTIVE
+ 0x000001
+
+	)
+
+55 
+	#VFS_CAP_REVISION_1
+ 0x01000000
+
+	)
+
+56 
+	#VFS_CAP_U32_1
+ 1
+
+	)
+
+57 
+	#XATTR_CAPS_SZ_1
+ ((
+__À32
+)*(1 + 2*
+VFS_CAP_U32_1
+))
+
+	)
+
+59 
+	#VFS_CAP_REVISION_2
+ 0x02000000
+
+	)
+
+60 
+	#VFS_CAP_U32_2
+ 2
+
+	)
+
+61 
+	#XATTR_CAPS_SZ_2
+ ((
+__À32
+)*(1 + 2*
+VFS_CAP_U32_2
+))
+
+	)
+
+63 
+	#XATTR_CAPS_SZ
+ 
+XATTR_CAPS_SZ_2
+
+
+	)
+
+64 
+	#VFS_CAP_U32
+ 
+VFS_CAP_U32_2
+
+
+	)
+
+65 
+	#VFS_CAP_REVISION
+ 
+VFS_CAP_REVISION_2
+
+
+	)
+
+67 
+	svfs_ˇp_d©a
+ {
+
+68 
+__À32
+ 
+	mmagic_ëc
+;
+
+70 
+__À32
+ 
+	m≥rmôãd
+;
+
+71 
+__À32
+ 
+	möhîôabÀ
+;
+
+72 } 
+	md©a
+[
+VFS_CAP_U32
+];
+
+81 
+	#_LINUX_CAPABILITY_VERSION
+ 
+_LINUX_CAPABILITY_VERSION_1
+
+
+	)
+
+82 
+	#_LINUX_CAPABILITY_U32S
+ 
+_LINUX_CAPABILITY_U32S_1
+
+
+	)
+
+94 
+	#CAP_CHOWN
+ 0
+
+	)
+
+100 
+	#CAP_DAC_OVERRIDE
+ 1
+
+	)
+
+106 
+	#CAP_DAC_READ_SEARCH
+ 2
+
+	)
+
+112 
+	#CAP_FOWNER
+ 3
+
+	)
+
+121 
+	#CAP_FSETID
+ 4
+
+	)
+
+127 
+	#CAP_KILL
+ 5
+
+	)
+
+133 
+	#CAP_SETGID
+ 6
+
+	)
+
+138 
+	#CAP_SETUID
+ 7
+
+	)
+
+155 
+	#CAP_SETPCAP
+ 8
+
+	)
+
+159 
+	#CAP_LINUX_IMMUTABLE
+ 9
+
+	)
+
+164 
+	#CAP_NET_BIND_SERVICE
+ 10
+
+	)
+
+168 
+	#CAP_NET_BROADCAST
+ 11
+
+	)
+
+184 
+	#CAP_NET_ADMIN
+ 12
+
+	)
+
+190 
+	#CAP_NET_RAW
+ 13
+
+	)
+
+196 
+	#CAP_IPC_LOCK
+ 14
+
+	)
+
+200 
+	#CAP_IPC_OWNER
+ 15
+
+	)
+
+203 
+	#CAP_SYS_MODULE
+ 16
+
+	)
+
+208 
+	#CAP_SYS_RAWIO
+ 17
+
+	)
+
+212 
+	#CAP_SYS_CHROOT
+ 18
+
+	)
+
+216 
+	#CAP_SYS_PTRACE
+ 19
+
+	)
+
+220 
+	#CAP_SYS_PACCT
+ 20
+
+	)
+
+259 
+	#CAP_SYS_ADMIN
+ 21
+
+	)
+
+263 
+	#CAP_SYS_BOOT
+ 22
+
+	)
+
+272 
+	#CAP_SYS_NICE
+ 23
+
+	)
+
+286 
+	#CAP_SYS_RESOURCE
+ 24
+
+	)
+
+292 
+	#CAP_SYS_TIME
+ 25
+
+	)
+
+297 
+	#CAP_SYS_TTY_CONFIG
+ 26
+
+	)
+
+301 
+	#CAP_MKNOD
+ 27
+
+	)
+
+305 
+	#CAP_LEASE
+ 28
+
+	)
+
+309 
+	#CAP_AUDIT_WRITE
+ 29
+
+	)
+
+313 
+	#CAP_AUDIT_CONTROL
+ 30
+
+	)
+
+315 
+	#CAP_SETFCAP
+ 31
+
+	)
+
+323 
+	#CAP_MAC_OVERRIDE
+ 32
+
+	)
+
+332 
+	#CAP_MAC_ADMIN
+ 33
+
+	)
+
+336 
+	#CAP_SYSLOG
+ 34
+
+	)
+
+340 
+	#CAP_WAKE_ALARM
+ 35
+
+	)
+
+344 
+	#CAP_BLOCK_SUSPEND
+ 36
+
+	)
+
+348 
+	#CAP_AUDIT_READ
+ 37
+
+	)
+
+351 
+	#CAP_LAST_CAP
+ 
+CAP_AUDIT_READ
+
+
+	)
+
+353 
+	#ˇp_vÆid
+(
+x
+Ë((xË>0 && (xË<
+CAP_LAST_CAP
+)
+
+	)
+
+359 
+	#CAP_TO_INDEX
+(
+x
+Ë((xË>> 5Ë
+
+	)
+
+360 
+	#CAP_TO_MASK
+(
+x
+Ë(1 << ((xË& 31)Ë
+
+	)
+
+	@/usr/include/linux/errno.h
+
+1 
+	~<asm/î∫o.h
+>
+
+	@/usr/include/linux/fs.h
+
+1 #i‚de‡
+_LINUX_FS_H
+
+
+2 
+	#_LINUX_FS_H
+
+
+	)
+
+12 
+	~<löux/limôs.h
+>
+
+13 
+	~<löux/io˘l.h
+>
+
+14 
+	~<löux/ty≥s.h
+>
+
+27 #unde‡
+NR_OPEN
+
+
+28 
+	#INR_OPEN_CUR
+ 1024
+
+	)
+
+29 
+	#INR_OPEN_MAX
+ 4096
+
+	)
+
+31 
+	#BLOCK_SIZE_BITS
+ 10
+
+	)
+
+32 
+	#BLOCK_SIZE
+ (1<<
+BLOCK_SIZE_BITS
+)
+
+	)
+
+34 
+	#SEEK_SET
+ 0
+
+	)
+
+35 
+	#SEEK_CUR
+ 1
+
+	)
+
+36 
+	#SEEK_END
+ 2
+
+	)
+
+37 
+	#SEEK_DATA
+ 3
+
+	)
+
+38 
+	#SEEK_HOLE
+ 4
+
+	)
+
+39 
+	#SEEK_MAX
+ 
+SEEK_HOLE
+
+
+	)
+
+41 
+	#RENAME_NOREPLACE
+ (1 << 0Ë
+
+	)
+
+42 
+	#RENAME_EXCHANGE
+ (1 << 1Ë
+
+	)
+
+43 
+	#RENAME_WHITEOUT
+ (1 << 2Ë
+
+	)
+
+45 
+	sfûe_˛⁄e_ønge
+ {
+
+46 
+__s64
+ 
+	m§c_fd
+;
+
+47 
+__u64
+ 
+	m§c_off£t
+;
+
+48 
+__u64
+ 
+	m§c_Àngth
+;
+
+49 
+__u64
+ 
+	mde°_off£t
+;
+
+52 
+	sf°rim_ønge
+ {
+
+53 
+__u64
+ 
+	m°¨t
+;
+
+54 
+__u64
+ 
+	mÀn
+;
+
+55 
+__u64
+ 
+	mmöÀn
+;
+
+59 
+	#FILE_DEDUPE_RANGE_SAME
+ 0
+
+	)
+
+60 
+	#FILE_DEDUPE_RANGE_DIFFERS
+ 1
+
+	)
+
+63 
+	sfûe_dedu≥_ønge_öfo
+ {
+
+64 
+__s64
+ 
+	mde°_fd
+;
+
+65 
+__u64
+ 
+	mde°_off£t
+;
+
+66 
+__u64
+ 
+	mbyãs_dedu≥d
+;
+
+73 
+__s32
+ 
+	m°©us
+;
+
+74 
+__u32
+ 
+	mª£rved
+;
+
+78 
+	sfûe_dedu≥_ønge
+ {
+
+79 
+__u64
+ 
+	m§c_off£t
+;
+
+80 
+__u64
+ 
+	m§c_Àngth
+;
+
+81 
+__u16
+ 
+	mde°_cou¡
+;
+
+82 
+__u16
+ 
+	mª£rved1
+;
+
+83 
+__u32
+ 
+	mª£rved2
+;
+
+84 
+fûe_dedu≥_ønge_öfo
+ 
+	möfo
+[0];
+
+88 
+	sfûes_°©_°ru˘
+ {
+
+89 
+	mƒ_fûes
+;
+
+90 
+	mƒ_‰ì_fûes
+;
+
+91 
+	mmax_fûes
+;
+
+94 
+	söodes_°©_t
+ {
+
+95 
+	mƒ_öodes
+;
+
+96 
+	mƒ_unu£d
+;
+
+97 
+	mdummy
+[5];
+
+101 
+	#NR_FILE
+ 8192
+
+	)
+
+107 
+	#MS_RDONLY
+ 1
+
+	)
+
+108 
+	#MS_NOSUID
+ 2
+
+	)
+
+109 
+	#MS_NODEV
+ 4
+
+	)
+
+110 
+	#MS_NOEXEC
+ 8
+
+	)
+
+111 
+	#MS_SYNCHRONOUS
+ 16
+
+	)
+
+112 
+	#MS_REMOUNT
+ 32
+
+	)
+
+113 
+	#MS_MANDLOCK
+ 64
+
+	)
+
+114 
+	#MS_DIRSYNC
+ 128
+
+	)
+
+115 
+	#MS_NOATIME
+ 1024
+
+	)
+
+116 
+	#MS_NODIRATIME
+ 2048
+
+	)
+
+117 
+	#MS_BIND
+ 4096
+
+	)
+
+118 
+	#MS_MOVE
+ 8192
+
+	)
+
+119 
+	#MS_REC
+ 16384
+
+	)
+
+120 
+	#MS_VERBOSE
+ 32768
+
+	)
+
+122 
+	#MS_SILENT
+ 32768
+
+	)
+
+123 
+	#MS_POSIXACL
+ (1<<16Ë
+
+	)
+
+124 
+	#MS_UNBINDABLE
+ (1<<17Ë
+
+	)
+
+125 
+	#MS_PRIVATE
+ (1<<18Ë
+
+	)
+
+126 
+	#MS_SLAVE
+ (1<<19Ë
+
+	)
+
+127 
+	#MS_SHARED
+ (1<<20Ë
+
+	)
+
+128 
+	#MS_RELATIME
+ (1<<21Ë
+
+	)
+
+129 
+	#MS_KERNMOUNT
+ (1<<22Ë
+
+	)
+
+130 
+	#MS_I_VERSION
+ (1<<23Ë
+
+	)
+
+131 
+	#MS_STRICTATIME
+ (1<<24Ë
+
+	)
+
+132 
+	#MS_LAZYTIME
+ (1<<25Ë
+
+	)
+
+135 
+	#MS_SUBMOUNT
+ (1<<26)
+
+	)
+
+136 
+	#MS_NOREMOTELOCK
+ (1<<27)
+
+	)
+
+137 
+	#MS_NOSEC
+ (1<<28)
+
+	)
+
+138 
+	#MS_BORN
+ (1<<29)
+
+	)
+
+139 
+	#MS_ACTIVE
+ (1<<30)
+
+	)
+
+140 
+	#MS_NOUSER
+ (1<<31)
+
+	)
+
+145 
+	#MS_RMT_MASK
+ (
+MS_RDONLY
+|
+MS_SYNCHRONOUS
+|
+MS_MANDLOCK
+|
+MS_I_VERSION
+|\
+
+146 
+MS_LAZYTIME
+)
+
+	)
+
+151 
+	#MS_MGC_VAL
+ 0xC0ED0000
+
+	)
+
+152 
+	#MS_MGC_MSK
+ 0xffff0000
+
+	)
+
+157 
+	sfsx©å
+ {
+
+158 
+__u32
+ 
+	mfsx_xÊags
+;
+
+159 
+__u32
+ 
+	mfsx_extsize
+;
+
+160 
+__u32
+ 
+	mfsx_√xã¡s
+;
+
+161 
+__u32
+ 
+	mfsx_¥ojid
+;
+
+162 
+__u32
+ 
+	mfsx_cowextsize
+;
+
+163 
+	mfsx_∑d
+[8];
+
+169 
+	#FS_XFLAG_REALTIME
+ 0x00000001
+
+	)
+
+170 
+	#FS_XFLAG_PREALLOC
+ 0x00000002
+
+	)
+
+171 
+	#FS_XFLAG_IMMUTABLE
+ 0x00000008
+
+	)
+
+172 
+	#FS_XFLAG_APPEND
+ 0x00000010
+
+	)
+
+173 
+	#FS_XFLAG_SYNC
+ 0x00000020
+
+	)
+
+174 
+	#FS_XFLAG_NOATIME
+ 0x00000040
+
+	)
+
+175 
+	#FS_XFLAG_NODUMP
+ 0x00000080
+
+	)
+
+176 
+	#FS_XFLAG_RTINHERIT
+ 0x00000100
+
+	)
+
+177 
+	#FS_XFLAG_PROJINHERIT
+ 0x00000200
+
+	)
+
+178 
+	#FS_XFLAG_NOSYMLINKS
+ 0x00000400
+
+	)
+
+179 
+	#FS_XFLAG_EXTSIZE
+ 0x00000800
+
+	)
+
+180 
+	#FS_XFLAG_EXTSZINHERIT
+ 0x00001000
+
+	)
+
+181 
+	#FS_XFLAG_NODEFRAG
+ 0x00002000
+
+	)
+
+182 
+	#FS_XFLAG_FILESTREAM
+ 0x00004000
+
+	)
+
+183 
+	#FS_XFLAG_DAX
+ 0x00008000
+
+	)
+
+184 
+	#FS_XFLAG_COWEXTSIZE
+ 0x00010000
+
+	)
+
+185 
+	#FS_XFLAG_HASATTR
+ 0x80000000
+
+	)
+
+190 
+	#BLKROSET
+ 
+	`_IO
+(0x12,93Ë
+
+	)
+
+191 
+	#BLKROGET
+ 
+	`_IO
+(0x12,94Ë
+
+	)
+
+192 
+	#BLKRRPART
+ 
+	`_IO
+(0x12,95Ë
+
+	)
+
+193 
+	#BLKGETSIZE
+ 
+	`_IO
+(0x12,96Ë
+
+	)
+
+194 
+	#BLKFLSBUF
+ 
+	`_IO
+(0x12,97Ë
+
+	)
+
+195 
+	#BLKRASET
+ 
+	`_IO
+(0x12,98Ë
+
+	)
+
+196 
+	#BLKRAGET
+ 
+	`_IO
+(0x12,99Ë
+
+	)
+
+197 
+	#BLKFRASET
+ 
+	`_IO
+(0x12,100)
+
+	)
+
+198 
+	#BLKFRAGET
+ 
+	`_IO
+(0x12,101)
+
+	)
+
+199 
+	#BLKSECTSET
+ 
+	`_IO
+(0x12,102)
+
+	)
+
+200 
+	#BLKSECTGET
+ 
+	`_IO
+(0x12,103)
+
+	)
+
+201 
+	#BLKSSZGET
+ 
+	`_IO
+(0x12,104)
+
+	)
+
+203 
+	#BLKPG
+ 
+	`_IO
+(0x12,105)
+
+	)
+
+207 
+	#BLKELVGET
+ 
+	`_IOR
+(0x12,106,
+size_t
+)
+
+	)
+
+208 
+	#BLKELVSET
+ 
+	`_IOW
+(0x12,107,
+size_t
+)
+
+	)
+
+213 
+	#BLKBSZGET
+ 
+	`_IOR
+(0x12,112,
+size_t
+)
+
+	)
+
+214 
+	#BLKBSZSET
+ 
+	`_IOW
+(0x12,113,
+size_t
+)
+
+	)
+
+215 
+	#BLKGETSIZE64
+ 
+	`_IOR
+(0x12,114,
+size_t
+Ë
+
+	)
+
+216 
+	#BLKTRACESETUP
+ 
+	`_IOWR
+(0x12,115,
+blk_u£r_åa˚_£tup
+)
+
+	)
+
+217 
+	#BLKTRACESTART
+ 
+	`_IO
+(0x12,116)
+
+	)
+
+218 
+	#BLKTRACESTOP
+ 
+	`_IO
+(0x12,117)
+
+	)
+
+219 
+	#BLKTRACETEARDOWN
+ 
+	`_IO
+(0x12,118)
+
+	)
+
+220 
+	#BLKDISCARD
+ 
+	`_IO
+(0x12,119)
+
+	)
+
+221 
+	#BLKIOMIN
+ 
+	`_IO
+(0x12,120)
+
+	)
+
+222 
+	#BLKIOOPT
+ 
+	`_IO
+(0x12,121)
+
+	)
+
+223 
+	#BLKALIGNOFF
+ 
+	`_IO
+(0x12,122)
+
+	)
+
+224 
+	#BLKPBSZGET
+ 
+	`_IO
+(0x12,123)
+
+	)
+
+225 
+	#BLKDISCARDZEROES
+ 
+	`_IO
+(0x12,124)
+
+	)
+
+226 
+	#BLKSECDISCARD
+ 
+	`_IO
+(0x12,125)
+
+	)
+
+227 
+	#BLKROTATIONAL
+ 
+	`_IO
+(0x12,126)
+
+	)
+
+228 
+	#BLKZEROOUT
+ 
+	`_IO
+(0x12,127)
+
+	)
+
+230 
+	#BMAP_IOCTL
+ 1
+
+	)
+
+231 
+	#FIBMAP
+ 
+	`_IO
+(0x00,1Ë
+
+	)
+
+232 
+	#FIGETBSZ
+ 
+	`_IO
+(0x00,2Ë
+
+	)
+
+233 
+	#FIFREEZE
+ 
+	`_IOWR
+('X', 119, Ë
+
+	)
+
+234 
+	#FITHAW
+ 
+	`_IOWR
+('X', 120, Ë
+
+	)
+
+235 
+	#FITRIM
+ 
+	`_IOWR
+('X', 121, 
+f°rim_ønge
+Ë
+
+	)
+
+236 
+	#FICLONE
+ 
+	`_IOW
+(0x94, 9, )
+
+	)
+
+237 
+	#FICLONERANGE
+ 
+	`_IOW
+(0x94, 13, 
+fûe_˛⁄e_ønge
+)
+
+	)
+
+238 
+	#FIDEDUPERANGE
+ 
+	`_IOWR
+(0x94, 54, 
+fûe_dedu≥_ønge
+)
+
+	)
+
+240 
+	#FS_IOC_GETFLAGS
+ 
+	`_IOR
+('f', 1, )
+
+	)
+
+241 
+	#FS_IOC_SETFLAGS
+ 
+	`_IOW
+('f', 2, )
+
+	)
+
+242 
+	#FS_IOC_GETVERSION
+ 
+	`_IOR
+('v', 1, )
+
+	)
+
+243 
+	#FS_IOC_SETVERSION
+ 
+	`_IOW
+('v', 2, )
+
+	)
+
+244 
+	#FS_IOC_FIEMAP
+ 
+	`_IOWR
+('f', 11, 
+fõm≠
+)
+
+	)
+
+245 
+	#FS_IOC32_GETFLAGS
+ 
+	`_IOR
+('f', 1, )
+
+	)
+
+246 
+	#FS_IOC32_SETFLAGS
+ 
+	`_IOW
+('f', 2, )
+
+	)
+
+247 
+	#FS_IOC32_GETVERSION
+ 
+	`_IOR
+('v', 1, )
+
+	)
+
+248 
+	#FS_IOC32_SETVERSION
+ 
+	`_IOW
+('v', 2, )
+
+	)
+
+249 
+	#FS_IOC_FSGETXATTR
+ 
+	`_IOR
+ ('X', 31, 
+fsx©å
+)
+
+	)
+
+250 
+	#FS_IOC_FSSETXATTR
+ 
+	`_IOW
+ ('X', 32, 
+fsx©å
+)
+
+	)
+
+256 
+	#FS_KEY_DESCRIPTOR_SIZE
+ 8
+
+	)
+
+258 
+	sfs¸y±_pﬁicy
+ {
+
+259 
+__u8
+ 
+	mvîsi⁄
+;
+
+260 
+__u8
+ 
+	mc⁄ã¡s_í¸y±i⁄_mode
+;
+
+261 
+__u8
+ 
+	mfûíames_í¸y±i⁄_mode
+;
+
+262 
+__u8
+ 
+	mÊags
+;
+
+263 
+__u8
+ 
+	mma°î_key_des¸ùt‹
+[
+FS_KEY_DESCRIPTOR_SIZE
+];
+
+264 } 
+__©åibuã__
+((
+∑cked
+));
+
+266 
+	#FS_IOC_SET_ENCRYPTION_POLICY
+ 
+	`_IOR
+('f', 19, 
+fs¸y±_pﬁicy
+)
+
+	)
+
+267 
+	#FS_IOC_GET_ENCRYPTION_PWSALT
+ 
+	`_IOW
+('f', 20, 
+__u8
+[16])
+
+	)
+
+268 
+	#FS_IOC_GET_ENCRYPTION_POLICY
+ 
+	`_IOW
+('f', 21, 
+fs¸y±_pﬁicy
+)
+
+	)
+
+290 
+	#FS_SECRM_FL
+ 0x00000001
+
+	)
+
+291 
+	#FS_UNRM_FL
+ 0x00000002
+
+	)
+
+292 
+	#FS_COMPR_FL
+ 0x00000004
+
+	)
+
+293 
+	#FS_SYNC_FL
+ 0x00000008
+
+	)
+
+294 
+	#FS_IMMUTABLE_FL
+ 0x00000010
+
+	)
+
+295 
+	#FS_APPEND_FL
+ 0x00000020
+
+	)
+
+296 
+	#FS_NODUMP_FL
+ 0x00000040
+
+	)
+
+297 
+	#FS_NOATIME_FL
+ 0x00000080
+
+	)
+
+299 
+	#FS_DIRTY_FL
+ 0x00000100
+
+	)
+
+300 
+	#FS_COMPRBLK_FL
+ 0x00000200
+
+	)
+
+301 
+	#FS_NOCOMP_FL
+ 0x00000400
+
+	)
+
+303 
+	#FS_ENCRYPT_FL
+ 0x00000800
+
+	)
+
+304 
+	#FS_BTREE_FL
+ 0x00001000
+
+	)
+
+305 
+	#FS_INDEX_FL
+ 0x00001000
+
+	)
+
+306 
+	#FS_IMAGIC_FL
+ 0x00002000
+
+	)
+
+307 
+	#FS_JOURNAL_DATA_FL
+ 0x00004000
+
+	)
+
+308 
+	#FS_NOTAIL_FL
+ 0x00008000
+
+	)
+
+309 
+	#FS_DIRSYNC_FL
+ 0x00010000
+
+	)
+
+310 
+	#FS_TOPDIR_FL
+ 0x00020000
+
+	)
+
+311 
+	#FS_HUGE_FILE_FL
+ 0x00040000
+
+	)
+
+312 
+	#FS_EXTENT_FL
+ 0x00080000
+
+	)
+
+313 
+	#FS_EA_INODE_FL
+ 0x00200000
+
+	)
+
+314 
+	#FS_EOFBLOCKS_FL
+ 0x00400000
+
+	)
+
+315 
+	#FS_NOCOW_FL
+ 0x00800000
+
+	)
+
+316 
+	#FS_INLINE_DATA_FL
+ 0x10000000
+
+	)
+
+317 
+	#FS_PROJINHERIT_FL
+ 0x20000000
+
+	)
+
+318 
+	#FS_RESERVED_FL
+ 0x80000000
+
+	)
+
+320 
+	#FS_FL_USER_VISIBLE
+ 0x0003DFFF
+
+	)
+
+321 
+	#FS_FL_USER_MODIFIABLE
+ 0x000380FF
+
+	)
+
+324 
+	#SYNC_FILE_RANGE_WAIT_BEFORE
+ 1
+
+	)
+
+325 
+	#SYNC_FILE_RANGE_WRITE
+ 2
+
+	)
+
+326 
+	#SYNC_FILE_RANGE_WAIT_AFTER
+ 4
+
+	)
+
+329 
+	#RWF_HIPRI
+ 0x00000001
+
+	)
+
+330 
+	#RWF_DSYNC
+ 0x00000002
+
+	)
+
+331 
+	#RWF_SYNC
+ 0x00000004
+
+	)
+
+	@/usr/include/linux/if_vlan.h
+
+13 #i‚de‡
+_LINUX_IF_VLAN_H_
+
+
+14 
+	#_LINUX_IF_VLAN_H_
+
+
+	)
+
+20 
+	evœn_io˘l_cmds
+ {
+
+21 
+	mADD_VLAN_CMD
+,
+
+22 
+	mDEL_VLAN_CMD
+,
+
+23 
+	mSET_VLAN_INGRESS_PRIORITY_CMD
+,
+
+24 
+	mSET_VLAN_EGRESS_PRIORITY_CMD
+,
+
+25 
+	mGET_VLAN_INGRESS_PRIORITY_CMD
+,
+
+26 
+	mGET_VLAN_EGRESS_PRIORITY_CMD
+,
+
+27 
+	mSET_VLAN_NAME_TYPE_CMD
+,
+
+28 
+	mSET_VLAN_FLAG_CMD
+,
+
+29 
+	mGET_VLAN_REALDEV_NAME_CMD
+,
+
+30 
+	mGET_VLAN_VID_CMD
+
+
+33 
+	evœn_Êags
+ {
+
+34 
+	mVLAN_FLAG_REORDER_HDR
+ = 0x1,
+
+35 
+	mVLAN_FLAG_GVRP
+ = 0x2,
+
+36 
+	mVLAN_FLAG_LOOSE_BINDING
+ = 0x4,
+
+37 
+	mVLAN_FLAG_MVRP
+ = 0x8,
+
+40 
+	evœn_«me_ty≥s
+ {
+
+41 
+	mVLAN_NAME_TYPE_PLUS_VID
+,
+
+42 
+	mVLAN_NAME_TYPE_RAW_PLUS_VID
+,
+
+43 
+	mVLAN_NAME_TYPE_PLUS_VID_NO_PAD
+,
+
+44 
+	mVLAN_NAME_TYPE_RAW_PLUS_VID_NO_PAD
+,
+
+45 
+	mVLAN_NAME_TYPE_HIGHEST
+
+
+48 
+	svœn_io˘l_¨gs
+ {
+
+49 
+	mcmd
+;
+
+50 
+	mdevi˚1
+[24];
+
+53 
+	mdevi˚2
+[24];
+
+54 
+	mVID
+;
+
+55 
+	mskb_¥i‹ôy
+;
+
+56 
+	m«me_ty≥
+;
+
+57 
+	mböd_ty≥
+;
+
+58 
+	mÊag
+;
+
+59 } 
+	mu
+;
+
+61 
+	mvœn_qos
+;
+
+	@/usr/include/linux/kernel.h
+
+1 #i‚de‡
+_LINUX_KERNEL_H
+
+
+2 
+	#_LINUX_KERNEL_H
+
+
+	)
+
+4 
+	~<löux/sysöfo.h
+>
+
+9 
+	#__ALIGN_KERNEL
+(
+x
+, 
+a
+Ë
+	`__ALIGN_KERNEL_MASK
+(x, (
+	`ty≥of
+(x))◊Ë- 1)
+
+	)
+
+10 
+	#__ALIGN_KERNEL_MASK
+(
+x
+, 
+mask
+Ë(((xË+ (mask)Ë& ~(mask))
+
+	)
+
+12 
+	#__KERNEL_DIV_ROUND_UP
+(
+n
+, 
+d
+Ë((“Ë+ (dË- 1Ë/ (d))
+
+	)
+
+	@/usr/include/linux/major.h
+
+1 #i‚de‡
+_LINUX_MAJOR_H
+
+
+2 
+	#_LINUX_MAJOR_H
+
+
+	)
+
+9 
+	#UNNAMED_MAJOR
+ 0
+
+	)
+
+10 
+	#MEM_MAJOR
+ 1
+
+	)
+
+11 
+	#RAMDISK_MAJOR
+ 1
+
+	)
+
+12 
+	#FLOPPY_MAJOR
+ 2
+
+	)
+
+13 
+	#PTY_MASTER_MAJOR
+ 2
+
+	)
+
+14 
+	#IDE0_MAJOR
+ 3
+
+	)
+
+15 
+	#HD_MAJOR
+ 
+IDE0_MAJOR
+
+
+	)
+
+16 
+	#PTY_SLAVE_MAJOR
+ 3
+
+	)
+
+17 
+	#TTY_MAJOR
+ 4
+
+	)
+
+18 
+	#TTYAUX_MAJOR
+ 5
+
+	)
+
+19 
+	#LP_MAJOR
+ 6
+
+	)
+
+20 
+	#VCS_MAJOR
+ 7
+
+	)
+
+21 
+	#LOOP_MAJOR
+ 7
+
+	)
+
+22 
+	#SCSI_DISK0_MAJOR
+ 8
+
+	)
+
+23 
+	#SCSI_TAPE_MAJOR
+ 9
+
+	)
+
+24 
+	#MD_MAJOR
+ 9
+
+	)
+
+25 
+	#MISC_MAJOR
+ 10
+
+	)
+
+26 
+	#SCSI_CDROM_MAJOR
+ 11
+
+	)
+
+27 
+	#MUX_MAJOR
+ 11
+
+	)
+
+28 
+	#XT_DISK_MAJOR
+ 13
+
+	)
+
+29 
+	#INPUT_MAJOR
+ 13
+
+	)
+
+30 
+	#SOUND_MAJOR
+ 14
+
+	)
+
+31 
+	#CDU31A_CDROM_MAJOR
+ 15
+
+	)
+
+32 
+	#JOYSTICK_MAJOR
+ 15
+
+	)
+
+33 
+	#GOLDSTAR_CDROM_MAJOR
+ 16
+
+	)
+
+34 
+	#OPTICS_CDROM_MAJOR
+ 17
+
+	)
+
+35 
+	#SANYO_CDROM_MAJOR
+ 18
+
+	)
+
+36 
+	#CYCLADES_MAJOR
+ 19
+
+	)
+
+37 
+	#CYCLADESAUX_MAJOR
+ 20
+
+	)
+
+38 
+	#MITSUMI_X_CDROM_MAJOR
+ 20
+
+	)
+
+39 
+	#MFM_ACORN_MAJOR
+ 21
+
+	)
+
+40 
+	#SCSI_GENERIC_MAJOR
+ 21
+
+	)
+
+41 
+	#IDE1_MAJOR
+ 22
+
+	)
+
+42 
+	#DIGICU_MAJOR
+ 22
+
+	)
+
+43 
+	#DIGI_MAJOR
+ 23
+
+	)
+
+44 
+	#MITSUMI_CDROM_MAJOR
+ 23
+
+	)
+
+45 
+	#CDU535_CDROM_MAJOR
+ 24
+
+	)
+
+46 
+	#STL_SERIALMAJOR
+ 24
+
+	)
+
+47 
+	#MATSUSHITA_CDROM_MAJOR
+ 25
+
+	)
+
+48 
+	#STL_CALLOUTMAJOR
+ 25
+
+	)
+
+49 
+	#MATSUSHITA_CDROM2_MAJOR
+ 26
+
+	)
+
+50 
+	#QIC117_TAPE_MAJOR
+ 27
+
+	)
+
+51 
+	#MATSUSHITA_CDROM3_MAJOR
+ 27
+
+	)
+
+52 
+	#MATSUSHITA_CDROM4_MAJOR
+ 28
+
+	)
+
+53 
+	#STL_SIOMEMMAJOR
+ 28
+
+	)
+
+54 
+	#ACSI_MAJOR
+ 28
+
+	)
+
+55 
+	#AZTECH_CDROM_MAJOR
+ 29
+
+	)
+
+56 
+	#FB_MAJOR
+ 29
+
+	)
+
+57 
+	#MTD_BLOCK_MAJOR
+ 31
+
+	)
+
+58 
+	#CM206_CDROM_MAJOR
+ 32
+
+	)
+
+59 
+	#IDE2_MAJOR
+ 33
+
+	)
+
+60 
+	#IDE3_MAJOR
+ 34
+
+	)
+
+61 
+	#Z8530_MAJOR
+ 34
+
+	)
+
+62 
+	#XPRAM_MAJOR
+ 35
+
+	)
+
+63 
+	#NETLINK_MAJOR
+ 36
+
+	)
+
+64 
+	#PS2ESDI_MAJOR
+ 36
+
+	)
+
+65 
+	#IDETAPE_MAJOR
+ 37
+
+	)
+
+66 
+	#Z2RAM_MAJOR
+ 37
+
+	)
+
+67 
+	#APBLOCK_MAJOR
+ 38
+
+	)
+
+68 
+	#DDV_MAJOR
+ 39
+
+	)
+
+69 
+	#NBD_MAJOR
+ 43
+
+	)
+
+70 
+	#RISCOM8_NORMAL_MAJOR
+ 48
+
+	)
+
+71 
+	#DAC960_MAJOR
+ 48
+
+	)
+
+72 
+	#RISCOM8_CALLOUT_MAJOR
+ 49
+
+	)
+
+73 
+	#MKISS_MAJOR
+ 55
+
+	)
+
+74 
+	#DSP56K_MAJOR
+ 55
+
+	)
+
+76 
+	#IDE4_MAJOR
+ 56
+
+	)
+
+77 
+	#IDE5_MAJOR
+ 57
+
+	)
+
+79 
+	#SCSI_DISK1_MAJOR
+ 65
+
+	)
+
+80 
+	#SCSI_DISK2_MAJOR
+ 66
+
+	)
+
+81 
+	#SCSI_DISK3_MAJOR
+ 67
+
+	)
+
+82 
+	#SCSI_DISK4_MAJOR
+ 68
+
+	)
+
+83 
+	#SCSI_DISK5_MAJOR
+ 69
+
+	)
+
+84 
+	#SCSI_DISK6_MAJOR
+ 70
+
+	)
+
+85 
+	#SCSI_DISK7_MAJOR
+ 71
+
+	)
+
+87 
+	#COMPAQ_SMART2_MAJOR
+ 72
+
+	)
+
+88 
+	#COMPAQ_SMART2_MAJOR1
+ 73
+
+	)
+
+89 
+	#COMPAQ_SMART2_MAJOR2
+ 74
+
+	)
+
+90 
+	#COMPAQ_SMART2_MAJOR3
+ 75
+
+	)
+
+91 
+	#COMPAQ_SMART2_MAJOR4
+ 76
+
+	)
+
+92 
+	#COMPAQ_SMART2_MAJOR5
+ 77
+
+	)
+
+93 
+	#COMPAQ_SMART2_MAJOR6
+ 78
+
+	)
+
+94 
+	#COMPAQ_SMART2_MAJOR7
+ 79
+
+	)
+
+96 
+	#SPECIALIX_NORMAL_MAJOR
+ 75
+
+	)
+
+97 
+	#SPECIALIX_CALLOUT_MAJOR
+ 76
+
+	)
+
+99 
+	#AURORA_MAJOR
+ 79
+
+	)
+
+101 
+	#I2O_MAJOR
+ 80
+
+	)
+
+103 
+	#SHMIQ_MAJOR
+ 85
+
+	)
+
+104 
+	#SCSI_CHANGER_MAJOR
+ 86
+
+	)
+
+106 
+	#IDE6_MAJOR
+ 88
+
+	)
+
+107 
+	#IDE7_MAJOR
+ 89
+
+	)
+
+108 
+	#IDE8_MAJOR
+ 90
+
+	)
+
+109 
+	#MTD_CHAR_MAJOR
+ 90
+
+	)
+
+110 
+	#IDE9_MAJOR
+ 91
+
+	)
+
+112 
+	#DASD_MAJOR
+ 94
+
+	)
+
+114 
+	#MDISK_MAJOR
+ 95
+
+	)
+
+116 
+	#UBD_MAJOR
+ 98
+
+	)
+
+118 
+	#PP_MAJOR
+ 99
+
+	)
+
+119 
+	#JSFD_MAJOR
+ 99
+
+	)
+
+121 
+	#PHONE_MAJOR
+ 100
+
+	)
+
+123 
+	#COMPAQ_CISS_MAJOR
+ 104
+
+	)
+
+124 
+	#COMPAQ_CISS_MAJOR1
+ 105
+
+	)
+
+125 
+	#COMPAQ_CISS_MAJOR2
+ 106
+
+	)
+
+126 
+	#COMPAQ_CISS_MAJOR3
+ 107
+
+	)
+
+127 
+	#COMPAQ_CISS_MAJOR4
+ 108
+
+	)
+
+128 
+	#COMPAQ_CISS_MAJOR5
+ 109
+
+	)
+
+129 
+	#COMPAQ_CISS_MAJOR6
+ 110
+
+	)
+
+130 
+	#COMPAQ_CISS_MAJOR7
+ 111
+
+	)
+
+132 
+	#VIODASD_MAJOR
+ 112
+
+	)
+
+133 
+	#VIOCD_MAJOR
+ 113
+
+	)
+
+135 
+	#ATARAID_MAJOR
+ 114
+
+	)
+
+137 
+	#SCSI_DISK8_MAJOR
+ 128
+
+	)
+
+138 
+	#SCSI_DISK9_MAJOR
+ 129
+
+	)
+
+139 
+	#SCSI_DISK10_MAJOR
+ 130
+
+	)
+
+140 
+	#SCSI_DISK11_MAJOR
+ 131
+
+	)
+
+141 
+	#SCSI_DISK12_MAJOR
+ 132
+
+	)
+
+142 
+	#SCSI_DISK13_MAJOR
+ 133
+
+	)
+
+143 
+	#SCSI_DISK14_MAJOR
+ 134
+
+	)
+
+144 
+	#SCSI_DISK15_MAJOR
+ 135
+
+	)
+
+146 
+	#UNIX98_PTY_MASTER_MAJOR
+ 128
+
+	)
+
+147 
+	#UNIX98_PTY_MAJOR_COUNT
+ 8
+
+	)
+
+148 
+	#UNIX98_PTY_SLAVE_MAJOR
+ (
+UNIX98_PTY_MASTER_MAJOR
++
+UNIX98_PTY_MAJOR_COUNT
+)
+
+	)
+
+150 
+	#DRBD_MAJOR
+ 147
+
+	)
+
+151 
+	#RTF_MAJOR
+ 150
+
+	)
+
+152 
+	#RAW_MAJOR
+ 162
+
+	)
+
+154 
+	#USB_ACM_MAJOR
+ 166
+
+	)
+
+155 
+	#USB_ACM_AUX_MAJOR
+ 167
+
+	)
+
+156 
+	#USB_CHAR_MAJOR
+ 180
+
+	)
+
+158 
+	#MMC_BLOCK_MAJOR
+ 179
+
+	)
+
+160 
+	#VXVM_MAJOR
+ 199
+
+	)
+
+161 
+	#VXSPEC_MAJOR
+ 200
+
+	)
+
+162 
+	#VXDMP_MAJOR
+ 201
+
+	)
+
+164 
+	#XENVBD_MAJOR
+ 202
+
+	)
+
+166 
+	#MSR_MAJOR
+ 202
+
+	)
+
+167 
+	#CPUID_MAJOR
+ 203
+
+	)
+
+169 
+	#OSST_MAJOR
+ 206
+
+	)
+
+171 
+	#IBM_TTY3270_MAJOR
+ 227
+
+	)
+
+172 
+	#IBM_FS3270_MAJOR
+ 228
+
+	)
+
+174 
+	#VIOTAPE_MAJOR
+ 230
+
+	)
+
+176 
+	#BLOCK_EXT_MAJOR
+ 259
+
+	)
+
+177 
+	#SCSI_OSD_MAJOR
+ 260
+
+	)
+
+	@/usr/include/linux/mman.h
+
+1 #i‚de‡
+_LINUX_MMAN_H
+
+
+2 
+	#_LINUX_MMAN_H
+
+
+	)
+
+4 
+	~<asm/mm™.h
+>
+
+6 
+	#MREMAP_MAYMOVE
+ 1
+
+	)
+
+7 
+	#MREMAP_FIXED
+ 2
+
+	)
+
+9 
+	#OVERCOMMIT_GUESS
+ 0
+
+	)
+
+10 
+	#OVERCOMMIT_ALWAYS
+ 1
+
+	)
+
+11 
+	#OVERCOMMIT_NEVER
+ 2
+
+	)
+
+	@/usr/include/linux/net.h
+
+18 #i‚de‡
+_LINUX_NET_H
+
+
+19 
+	#_LINUX_NET_H
+
+
+	)
+
+21 
+	~<löux/sockë.h
+>
+
+22 
+	~<asm/sockë.h
+>
+
+24 
+	#NPROTO
+ 
+AF_MAX
+
+
+	)
+
+26 
+	#SYS_SOCKET
+ 1
+
+	)
+
+27 
+	#SYS_BIND
+ 2
+
+	)
+
+28 
+	#SYS_CONNECT
+ 3
+
+	)
+
+29 
+	#SYS_LISTEN
+ 4
+
+	)
+
+30 
+	#SYS_ACCEPT
+ 5
+
+	)
+
+31 
+	#SYS_GETSOCKNAME
+ 6
+
+	)
+
+32 
+	#SYS_GETPEERNAME
+ 7
+
+	)
+
+33 
+	#SYS_SOCKETPAIR
+ 8
+
+	)
+
+34 
+	#SYS_SEND
+ 9
+
+	)
+
+35 
+	#SYS_RECV
+ 10
+
+	)
+
+36 
+	#SYS_SENDTO
+ 11
+
+	)
+
+37 
+	#SYS_RECVFROM
+ 12
+
+	)
+
+38 
+	#SYS_SHUTDOWN
+ 13
+
+	)
+
+39 
+	#SYS_SETSOCKOPT
+ 14
+
+	)
+
+40 
+	#SYS_GETSOCKOPT
+ 15
+
+	)
+
+41 
+	#SYS_SENDMSG
+ 16
+
+	)
+
+42 
+	#SYS_RECVMSG
+ 17
+
+	)
+
+43 
+	#SYS_ACCEPT4
+ 18
+
+	)
+
+44 
+	#SYS_RECVMMSG
+ 19
+
+	)
+
+45 
+	#SYS_SENDMMSG
+ 20
+
+	)
+
+48 
+	mSS_FREE
+ = 0,
+
+49 
+	mSS_UNCONNECTED
+,
+
+50 
+	mSS_CONNECTING
+,
+
+51 
+	mSS_CONNECTED
+,
+
+52 
+	mSS_DISCONNECTING
+
+
+53 } 
+	tsockë_°©e
+;
+
+55 
+	#__SO_ACCEPTCON
+ (1 << 16Ë
+
+	)
+
+	@/usr/include/linux/netlink.h
+
+1 #i‚de‡
+__LINUX_NETLINK_H
+
+
+2 
+	#__LINUX_NETLINK_H
+
+
+	)
+
+4 
+	~<löux/kî√l.h
+>
+
+5 
+	~<löux/sockë.h
+>
+
+6 
+	~<löux/ty≥s.h
+>
+
+8 
+	#NETLINK_ROUTE
+ 0
+
+	)
+
+9 
+	#NETLINK_UNUSED
+ 1
+
+	)
+
+10 
+	#NETLINK_USERSOCK
+ 2
+
+	)
+
+11 
+	#NETLINK_FIREWALL
+ 3
+
+	)
+
+12 
+	#NETLINK_SOCK_DIAG
+ 4
+
+	)
+
+13 
+	#NETLINK_NFLOG
+ 5
+
+	)
+
+14 
+	#NETLINK_XFRM
+ 6
+
+	)
+
+15 
+	#NETLINK_SELINUX
+ 7
+
+	)
+
+16 
+	#NETLINK_ISCSI
+ 8
+
+	)
+
+17 
+	#NETLINK_AUDIT
+ 9
+
+	)
+
+18 
+	#NETLINK_FIB_LOOKUP
+ 10
+
+	)
+
+19 
+	#NETLINK_CONNECTOR
+ 11
+
+	)
+
+20 
+	#NETLINK_NETFILTER
+ 12
+
+	)
+
+21 
+	#NETLINK_IP6_FW
+ 13
+
+	)
+
+22 
+	#NETLINK_DNRTMSG
+ 14
+
+	)
+
+23 
+	#NETLINK_KOBJECT_UEVENT
+ 15
+
+	)
+
+24 
+	#NETLINK_GENERIC
+ 16
+
+	)
+
+26 
+	#NETLINK_SCSITRANSPORT
+ 18
+
+	)
+
+27 
+	#NETLINK_ECRYPTFS
+ 19
+
+	)
+
+28 
+	#NETLINK_RDMA
+ 20
+
+	)
+
+29 
+	#NETLINK_CRYPTO
+ 21
+
+	)
+
+31 
+	#NETLINK_INET_DIAG
+ 
+NETLINK_SOCK_DIAG
+
+
+	)
+
+33 
+	#MAX_LINKS
+ 32
+
+	)
+
+35 
+	ssockaddr_∆
+ {
+
+36 
+__kî√l_ß_Ámûy_t
+ 
+	m∆_Ámûy
+;
+
+37 
+	m∆_∑d
+;
+
+38 
+__u32
+ 
+	m∆_pid
+;
+
+39 
+__u32
+ 
+	m∆_groups
+;
+
+42 
+	s∆msghdr
+ {
+
+43 
+__u32
+ 
+	m∆msg_Àn
+;
+
+44 
+__u16
+ 
+	m∆msg_ty≥
+;
+
+45 
+__u16
+ 
+	m∆msg_Êags
+;
+
+46 
+__u32
+ 
+	m∆msg_£q
+;
+
+47 
+__u32
+ 
+	m∆msg_pid
+;
+
+52 
+	#NLM_F_REQUEST
+ 1
+
+	)
+
+53 
+	#NLM_F_MULTI
+ 2
+
+	)
+
+54 
+	#NLM_F_ACK
+ 4
+
+	)
+
+55 
+	#NLM_F_ECHO
+ 8
+
+	)
+
+56 
+	#NLM_F_DUMP_INTR
+ 16
+
+	)
+
+57 
+	#NLM_F_DUMP_FILTERED
+ 32
+
+	)
+
+60 
+	#NLM_F_ROOT
+ 0x100
+
+	)
+
+61 
+	#NLM_F_MATCH
+ 0x200
+
+	)
+
+62 
+	#NLM_F_ATOMIC
+ 0x400
+
+	)
+
+63 
+	#NLM_F_DUMP
+ (
+NLM_F_ROOT
+|
+NLM_F_MATCH
+)
+
+	)
+
+66 
+	#NLM_F_REPLACE
+ 0x100
+
+	)
+
+67 
+	#NLM_F_EXCL
+ 0x200
+
+	)
+
+68 
+	#NLM_F_CREATE
+ 0x400
+
+	)
+
+69 
+	#NLM_F_APPEND
+ 0x800
+
+	)
+
+80 
+	#NLMSG_ALIGNTO
+ 4U
+
+	)
+
+81 
+	#NLMSG_ALIGN
+(
+Àn
+Ë–(÷í)+
+NLMSG_ALIGNTO
+-1Ë& ~(NLMSG_ALIGNTO-1Ë)
+
+	)
+
+82 
+	#NLMSG_HDRLEN
+ ((Ë
+	`NLMSG_ALIGN
+((
+∆msghdr
+)))
+
+	)
+
+83 
+	#NLMSG_LENGTH
+(
+Àn
+Ë(÷íË+ 
+NLMSG_HDRLEN
+)
+
+	)
+
+84 
+	#NLMSG_SPACE
+(
+Àn
+Ë
+	`NLMSG_ALIGN
+(
+	`NLMSG_LENGTH
+÷í))
+
+	)
+
+85 
+	#NLMSG_DATA
+(
+∆h
+Ë((*)(((*ÍlhË+ 
+	`NLMSG_LENGTH
+(0)))
+
+	)
+
+86 
+	#NLMSG_NEXT
+(
+∆h
+,
+Àn
+Ë(÷íË-
+	`NLMSG_ALIGN
+(“lh)->
+∆msg_Àn
+), \
+
+87 (
+∆msghdr
+*)(((*)(
+∆h
+)Ë+ 
+	`NLMSG_ALIGN
+(“lh)->
+∆msg_Àn
+)))
+
+	)
+
+88 
+	#NLMSG_OK
+(
+∆h
+,
+Àn
+Ë(÷íË>()(
+∆msghdr
+) && \
+
+89 (
+∆h
+)->
+∆msg_Àn
+ >(
+∆msghdr
+) && \
+
+90 (
+∆h
+)->
+∆msg_Àn
+ <(
+Àn
+))
+
+	)
+
+91 
+	#NLMSG_PAYLOAD
+(
+∆h
+,
+Àn
+Ë(“lh)->
+∆msg_Àn
+ - 
+	`NLMSG_SPACE
+(÷í)))
+
+	)
+
+93 
+	#NLMSG_NOOP
+ 0x1
+
+	)
+
+94 
+	#NLMSG_ERROR
+ 0x2
+
+	)
+
+95 
+	#NLMSG_DONE
+ 0x3
+
+	)
+
+96 
+	#NLMSG_OVERRUN
+ 0x4
+
+	)
+
+98 
+	#NLMSG_MIN_TYPE
+ 0x10
+
+	)
+
+100 
+	s∆msgîr
+ {
+
+101 
+	mîr‹
+;
+
+102 
+∆msghdr
+ 
+	mmsg
+;
+
+105 
+	#NETLINK_ADD_MEMBERSHIP
+ 1
+
+	)
+
+106 
+	#NETLINK_DROP_MEMBERSHIP
+ 2
+
+	)
+
+107 
+	#NETLINK_PKTINFO
+ 3
+
+	)
+
+108 
+	#NETLINK_BROADCAST_ERROR
+ 4
+
+	)
+
+109 
+	#NETLINK_NO_ENOBUFS
+ 5
+
+	)
+
+110 
+	#NETLINK_RX_RING
+ 6
+
+	)
+
+111 
+	#NETLINK_TX_RING
+ 7
+
+	)
+
+112 
+	#NETLINK_LISTEN_ALL_NSID
+ 8
+
+	)
+
+113 
+	#NETLINK_LIST_MEMBERSHIPS
+ 9
+
+	)
+
+114 
+	#NETLINK_CAP_ACK
+ 10
+
+	)
+
+116 
+	s∆_pktöfo
+ {
+
+117 
+__u32
+ 
+	mgroup
+;
+
+120 
+	s∆_mm≠_ªq
+ {
+
+121 
+	mnm_block_size
+;
+
+122 
+	mnm_block_ƒ
+;
+
+123 
+	mnm_‰ame_size
+;
+
+124 
+	mnm_‰ame_ƒ
+;
+
+127 
+	s∆_mm≠_hdr
+ {
+
+128 
+	mnm_°©us
+;
+
+129 
+	mnm_Àn
+;
+
+130 
+__u32
+ 
+	mnm_group
+;
+
+132 
+__u32
+ 
+	mnm_pid
+;
+
+133 
+__u32
+ 
+	mnm_uid
+;
+
+134 
+__u32
+ 
+	mnm_gid
+;
+
+137 
+	e∆_mm≠_°©us
+ {
+
+138 
+	mNL_MMAP_STATUS_UNUSED
+,
+
+139 
+	mNL_MMAP_STATUS_RESERVED
+,
+
+140 
+	mNL_MMAP_STATUS_VALID
+,
+
+141 
+	mNL_MMAP_STATUS_COPY
+,
+
+142 
+	mNL_MMAP_STATUS_SKIP
+,
+
+145 
+	#NL_MMAP_MSG_ALIGNMENT
+ 
+NLMSG_ALIGNTO
+
+
+	)
+
+146 
+	#NL_MMAP_MSG_ALIGN
+(
+sz
+Ë
+	`__ALIGN_KERNEL
+(sz, 
+NL_MMAP_MSG_ALIGNMENT
+)
+
+	)
+
+147 
+	#NL_MMAP_HDRLEN
+ 
+	`NL_MMAP_MSG_ALIGN
+((
+∆_mm≠_hdr
+))
+
+	)
+
+149 
+	#NET_MAJOR
+ 36
+
+	)
+
+152 
+	mNETLINK_UNCONNECTED
+ = 0,
+
+153 
+	mNETLINK_CONNECTED
+,
+
+165 
+	s∆©å
+ {
+
+166 
+__u16
+ 
+	m∆a_Àn
+;
+
+167 
+__u16
+ 
+	m∆a_ty≥
+;
+
+180 
+	#NLA_F_NESTED
+ (1 << 15)
+
+	)
+
+181 
+	#NLA_F_NET_BYTEORDER
+ (1 << 14)
+
+	)
+
+182 
+	#NLA_TYPE_MASK
+ ~(
+NLA_F_NESTED
+ | 
+NLA_F_NET_BYTEORDER
+)
+
+	)
+
+184 
+	#NLA_ALIGNTO
+ 4
+
+	)
+
+185 
+	#NLA_ALIGN
+(
+Àn
+Ë((÷íË+ 
+NLA_ALIGNTO
+ - 1Ë& ~(NLA_ALIGNTO - 1))
+
+	)
+
+186 
+	#NLA_HDRLEN
+ ((Ë
+	`NLA_ALIGN
+((
+∆©å
+)))
+
+	)
+
+	@/usr/include/linux/reboot.h
+
+1 #i‚de‡
+_LINUX_REBOOT_H
+
+
+2 
+	#_LINUX_REBOOT_H
+
+
+	)
+
+8 
+	#LINUX_REBOOT_MAGIC1
+ 0x„e1dód
+
+	)
+
+9 
+	#LINUX_REBOOT_MAGIC2
+ 672274793
+
+	)
+
+10 
+	#LINUX_REBOOT_MAGIC2A
+ 85072278
+
+	)
+
+11 
+	#LINUX_REBOOT_MAGIC2B
+ 369367448
+
+	)
+
+12 
+	#LINUX_REBOOT_MAGIC2C
+ 537993216
+
+	)
+
+28 
+	#LINUX_REBOOT_CMD_RESTART
+ 0x01234567
+
+	)
+
+29 
+	#LINUX_REBOOT_CMD_HALT
+ 0xCDEF0123
+
+	)
+
+30 
+	#LINUX_REBOOT_CMD_CAD_ON
+ 0x89ABCDEF
+
+	)
+
+31 
+	#LINUX_REBOOT_CMD_CAD_OFF
+ 0x00000000
+
+	)
+
+32 
+	#LINUX_REBOOT_CMD_POWER_OFF
+ 0x4321FEDC
+
+	)
+
+33 
+	#LINUX_REBOOT_CMD_RESTART2
+ 0xA1B2C3D4
+
+	)
+
+34 
+	#LINUX_REBOOT_CMD_SW_SUSPEND
+ 0xD000FCE2
+
+	)
+
+35 
+	#LINUX_REBOOT_CMD_KEXEC
+ 0x45584543
+
+	)
+
+	@/usr/include/linux/socket.h
+
+1 #i‚de‡
+_LINUX_SOCKET_H
+
+
+2 
+	#_LINUX_SOCKET_H
+
+
+	)
+
+7 
+	#_K_SS_MAXSIZE
+ 128
+
+	)
+
+8 
+	#_K_SS_ALIGNSIZE
+ (
+	`__Æignof__
+ (
+sockaddr
+ *))
+
+	)
+
+11 
+	t__kî√l_ß_Ámûy_t
+;
+
+13 
+	s__kî√l_sockaddr_°‹age
+ {
+
+14 
+__kî√l_ß_Ámûy_t
+ 
+	mss_Ámûy
+;
+
+16 
+	m__d©a
+[
+_K_SS_MAXSIZE
+ - ()];
+
+19 } 
+__©åibuã__
+ ((
+Æig√d
+(
+_K_SS_ALIGNSIZE
+)));
+
+	@/usr/include/linux/ioctl.h
+
+1 #i‚de‡
+_LINUX_IOCTL_H
+
+
+2 
+	#_LINUX_IOCTL_H
+
+
+	)
+
+4 
+	~<asm/io˘l.h
+>
+
+	@/usr/include/linux/limits.h
+
+1 #i‚de‡
+_LINUX_LIMITS_H
+
+
+2 
+	#_LINUX_LIMITS_H
+
+
+	)
+
+4 
+	#NR_OPEN
+ 1024
+
+	)
+
+6 
+	#NGROUPS_MAX
+ 65536
+
+	)
+
+7 
+	#ARG_MAX
+ 131072
+
+	)
+
+8 
+	#LINK_MAX
+ 127
+
+	)
+
+9 
+	#MAX_CANON
+ 255
+
+	)
+
+10 
+	#MAX_INPUT
+ 255
+
+	)
+
+11 
+	#NAME_MAX
+ 255
+
+	)
+
+12 
+	#PATH_MAX
+ 4096
+
+	)
+
+13 
+	#PIPE_BUF
+ 4096
+
+	)
+
+14 
+	#XATTR_NAME_MAX
+ 255
+
+	)
+
+15 
+	#XATTR_SIZE_MAX
+ 65536
+
+	)
+
+16 
+	#XATTR_LIST_MAX
+ 65536
+
+	)
+
+18 
+	#RTSIG_MAX
+ 32
+
+	)
+
+	@/usr/include/linux/sysinfo.h
+
+1 #i‚de‡
+_LINUX_SYSINFO_H
+
+
+2 
+	#_LINUX_SYSINFO_H
+
+
+	)
+
+4 
+	~<löux/ty≥s.h
+>
+
+6 
+	#SI_LOAD_SHIFT
+ 16
+
+	)
+
+7 
+	ssysöfo
+ {
+
+8 
+__kî√l_l⁄g_t
+ 
+	mu±ime
+;
+
+9 
+__kî√l_ul⁄g_t
+ 
+	mlﬂds
+[3];
+
+10 
+__kî√l_ul⁄g_t
+ 
+	mtŸÆøm
+;
+
+11 
+__kî√l_ul⁄g_t
+ 
+	m‰ìøm
+;
+
+12 
+__kî√l_ul⁄g_t
+ 
+	msh¨edøm
+;
+
+13 
+__kî√l_ul⁄g_t
+ 
+	mbuf„ºam
+;
+
+14 
+__kî√l_ul⁄g_t
+ 
+	mtŸÆsw≠
+;
+
+15 
+__kî√l_ul⁄g_t
+ 
+	m‰ìsw≠
+;
+
+16 
+__u16
+ 
+	m¥ocs
+;
+
+17 
+__u16
+ 
+	m∑d
+;
+
+18 
+__kî√l_ul⁄g_t
+ 
+	mtŸÆhigh
+;
+
+19 
+__kî√l_ul⁄g_t
+ 
+	m‰ìhigh
+;
+
+20 
+__u32
+ 
+	mmem_unô
+;
+
+21 
+	m_f
+[20-2*(
+__kî√l_ul⁄g_t
+)-(
+__u32
+)];
+
+	@/usr/include/linux/types.h
+
+1 #i‚de‡
+_LINUX_TYPES_H
+
+
+2 
+	#_LINUX_TYPES_H
+
+
+	)
+
+4 
+	~<asm/ty≥s.h
+>
+
+6 #i‚de‡
+__ASSEMBLY__
+
+
+8 
+	~<löux/posix_ty≥s.h
+>
+
+16 #ifde‡
+__CHECKER__
+
+
+17 
+	#__bôwi£__
+ 
+	`__©åibuã__
+((
+bôwi£
+))
+
+	)
+
+19 
+	#__bôwi£__
+
+
+	)
+
+21 #ifde‡
+__CHECK_ENDIAN__
+
+
+22 
+	#__bôwi£
+ 
+__bôwi£__
+
+
+	)
+
+24 
+	#__bôwi£
+
+
+	)
+
+27 
+__u16
+ 
+	t__bôwi£
+ 
+	t__À16
+;
+
+28 
+__u16
+ 
+	t__bôwi£
+ 
+	t__be16
+;
+
+29 
+__u32
+ 
+	t__bôwi£
+ 
+	t__À32
+;
+
+30 
+__u32
+ 
+	t__bôwi£
+ 
+	t__be32
+;
+
+31 
+__u64
+ 
+	t__bôwi£
+ 
+	t__À64
+;
+
+32 
+__u64
+ 
+	t__bôwi£
+ 
+	t__be64
+;
+
+34 
+__u16
+ 
+	t__bôwi£
+ 
+	t__sum16
+;
+
+35 
+__u32
+ 
+	t__bôwi£
+ 
+	t__wsum
+;
+
+46 
+	#__Æig√d_u64
+ 
+__u64
+ 
+	`__©åibuã__
+((
+	`Æig√d
+(8)))
+
+	)
+
+47 
+	#__Æig√d_be64
+ 
+__be64
+ 
+	`__©åibuã__
+((
+	`Æig√d
+(8)))
+
+	)
+
+48 
+	#__Æig√d_À64
+ 
+__À64
+ 
+	`__©åibuã__
+((
+	`Æig√d
+(8)))
+
+	)
+
+	@/usr/include/linux/posix_types.h
+
+1 #i‚de‡
+_LINUX_POSIX_TYPES_H
+
+
+2 
+	#_LINUX_POSIX_TYPES_H
+
+
+	)
+
+4 
+	~<löux/°ddef.h
+>
+
+21 #unde‡
+__FD_SETSIZE
+
+
+22 
+	#__FD_SETSIZE
+ 1024
+
+	)
+
+25 
+	mfds_bôs
+[
+__FD_SETSIZE
+ / (8 * ())];
+
+26 } 
+	t__kî√l_fd_£t
+;
+
+29 (*
+	t__kî√l_sigh™dÀr_t
+)();
+
+32 
+	t__kî√l_key_t
+;
+
+33 
+	t__kî√l_mqd_t
+;
+
+35 
+	~<asm/posix_ty≥s.h
+>
+
+	@/usr/include/linux/stddef.h
+
+3 #i‚de‡
+__Æways_ölöe
+
+
+4 
+	#__Æways_ölöe
+ 
+__ölöe__
+
+
+	)
+
+	@
+1
+.
+1
+/usr/include
+27
+618
+devfs_stubs.c
+devfs_stubs.h
+firmadyne.c
+firmadyne.h
+hooks-private.h
+hooks.c
+hooks.h
+procfs_stubs.c
+procfs_stubs.h
+/usr/include/linux/binfmts.h
+/usr/include/linux/capability.h
+/usr/include/linux/errno.h
+/usr/include/linux/fs.h
+/usr/include/linux/if_vlan.h
+/usr/include/linux/kernel.h
+/usr/include/linux/major.h
+/usr/include/linux/mman.h
+/usr/include/linux/net.h
+/usr/include/linux/netlink.h
+/usr/include/linux/reboot.h
+/usr/include/linux/socket.h
+/usr/include/linux/ioctl.h
+/usr/include/linux/limits.h
+/usr/include/linux/sysinfo.h
+/usr/include/linux/types.h
+/usr/include/linux/posix_types.h
+/usr/include/linux/stddef.h
