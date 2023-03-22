@@ -1,8 +1,10 @@
 # FirmSolo
 
 FirmSolo is a framework that exposes Linux-based IoT kernel modules to downstream analysis (e.g., TriforceAFL, Firmadyne).
+FirmSolo provides two stages: 1) In the first stage FirmSolo extracts metadata information from the kernel modules within a firmware image (e.g., kernel symbols, arch, endianness). 2) In the second stage FirmSolo uses the extracted metadata information to build a Linux kernel (supported by QEMU) that can load the firmware binary kernel modules and expose them to dynamic analysis systems, such as TriforceAFL and/or Firmadyne. 
+Currently FirmSolo only supports only MIPS and ARM 32bit Linux-based firmware images.
 
-This repository contains the prototype implementation of FirmSolo based on the Usenix 2023 paper.
+This repository contains the prototype implementation of FirmSolo based on the Usenix 2023 [paper](https://www.usenix.org/conference/usenixsecurity23/presentation/angelakopoulos).
 
 # Docker
 Below there is a link to a docker image that contains FirmSolo, Firmadyne, and TriforceAFL. We highly recommend you use that since all the artifacts are already setup within the docker image.
