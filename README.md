@@ -11,6 +11,9 @@ Below there is a link to a docker image that contains FirmSolo, Firmadyne, and T
 
 https://drive.google.com/file/d/1ZjOBpLKOffz4PigNH1xkZsy3zvhGMt7p/view?usp=share_link
 
+You can also find the docker image here:
+https://doi.org/10.5281/zenodo.7789886
+
 Execute:
 
 ```
