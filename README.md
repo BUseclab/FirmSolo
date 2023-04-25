@@ -80,7 +80,7 @@ Download TriforceAFL:
 ```
 git clone https://github.com/BUseclab/TriforceAFL.git
 
-cd /TriforceAFL
+cd TriforceAFL
 
 make
 ```
