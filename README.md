@@ -6,23 +6,33 @@ Currently FirmSolo only supports only MIPS and ARM 32bit Linux-based firmware im
 
 This repository contains the prototype implementation of FirmSolo based on the Usenix 2023 [paper](https://www.usenix.org/conference/usenixsecurity23/presentation/angelakopoulos).
 
+**Note:** Some parts of the code may need cleanup or re-writing in the worst case, thus this prototype is not yet ready for production.
+
 # Docker
-Below there is a link to a docker image that contains FirmSolo, Firmadyne, and TriforceAFL. We highly recommend you use that since all the artifacts are already setup within the docker image.
+Below there is a link to a base docker image that can be used along with the Dockerfile to build the FirmSolo docker. We highly recommend you use that since all the artifacts (e.g., toolchains, ghidra, FirmSolo source code, etc) will be setup within the docker.
 
-https://drive.google.com/file/d/1ZjOBpLKOffz4PigNH1xkZsy3zvhGMt7p/view?usp=share_link
-
-You can also find the docker image here:
-https://doi.org/10.5281/zenodo.7789886
+You can find the docker image here:
+https://doi.org/10.5281/zenodo.7865451
 
 Execute:
 
 ```
 docker load < firmsolo.tar.gz
+
+cd <fs_install_dir>/
+
+docker build -t firmsolo .
 ```
+
+Change `<fs_install_dir>` to the directory where you cloned FirmSolo.
 
 **Running the docker**
 
 ```
+mkdir -p workdir
+
+cd workdir
+
 docker run -v $(pwd):/output --rm -it --privileged firmsolo /bin/bash
 ```
 
@@ -45,7 +55,7 @@ Since all the FirmSolo artifacts are installed in the docker, you can skip to th
 If you want to install FirmSolo manually you first need to install some dependencies:
 
 ```
-sudo apt-get install build-essential zlib1g-dev pkg-config libglib2.0-dev binutils-dev libboost-all-dev autoconf libtool libssl-dev libpixman-1-dev libpython3-dev python3-pip python3-capstone virtualenv gcc make g++ python3 python2 flex bison dwarves kmod universal-ctags kpartx fdisk fakeroot git dmsetup kpartx netcat-openbsd nmap python3-psycopg2 snmp uml-utilities util-linux vlan busybox-static wget cscope qemu qemu-system-arm qemu-system-mips qemu-system-mipsel qemu-utils
+sudo apt-get install build-essential zlib1g-dev pkg-config libglib2.0-dev binutils-dev libboost-all-dev autoconf libtool libssl-dev libpixman-1-dev libpython3-dev python3-pip python3-capstone python-is-python3 virtualenv sudo gcc make g++ python3 python2 flex bison dwarves kmod universal-ctags fdisk fakeroot git dmsetup kpartx netcat-openbsd nmap python3-psycopg2 snmp uml-utilities util-linux vlan busybox-static postgresql wget cscope qemu qemu-system-arm qemu-system-mips qemu-system-mipsel qemu-utils
 
 pip3 install ply anytree sympy requests pexpect scipy
 ```
@@ -65,33 +75,37 @@ Follow instuctions in https://ghidra-sre.org/InstallationGuide.html
 
 **Install our custom implementation for TriforceAFL/TriforceLinuxSyscallFuzzer:**
 
-Download TriforceAFL from:
+Download TriforceAFL:
 
-https://drive.google.com/file/d/1qMwsVd0kQWg-WH3VmvKkOcyOqsSfClsl/view?usp=share_link
-
-Download TriforceLinuxSyscallFuzzer from:
-
-https://drive.google.com/file/d/1ogwxAU3ikHJin3L-DuVORVx6efHiCRag/view?usp=share_link
-
-Execute:
 ```
-tar xvf triforceafl.tar.gz
+git clone https://github.com/BUseclab/TriforceAFL.git
 
-tar xvf triforcelsf.tar.gz
+cd /TriforceAFL
 
-cd TriforceAFL && make
+make
 ```
+
+Download TriforceLinuxSyscallFuzzer:
+
+```
+git clone https://github.com/BUseclab/TriforceLinuxSyscallFuzzer.git
+
+cd TriforceLinuxSyscallFuzzer
+
+./compile_harnesses.sh
+```
+
+**Note:** Probably you won't be able to compile the fuzzing harnesses because they require the legacy (and unavailable) 
+toolchains that are present within the FirmSolo docker. In the future we will add simple instructions of how to compile
+the harnesses with newer toolchains.
+
 
 **Install our custom implementation for Firmadyne:**
 
-Download Firmadyne from:
-
-https://drive.google.com/file/d/1hkLdjLv9aLrtIebYm39etTS1NlQaRxZy/view?usp=share_link
-
-Execute:
+Download Firmadyne:
 
 ```
-tar xvf firmadyne.tar.gz
+git clone --recursive https://github.com/BUseclab/firmadyne.git
 ```
 
 **Download the buildroot filesystems**
@@ -307,6 +321,23 @@ It might be the case, while running the exploits from ExploitDB and the bugs fou
 kernel just hangs instead of printing an `Oops` message in the serial logs. You may need to rerun the analysis in this case.
 
 **Note:** To run example 2 just replace the image id in the above commands with 2.
+
+**Analyze custom firmware images:**
+
+To analyze firmware images besides our examples, you first need to extract their file-system and kernel.
+To do that you have to install the database and binwalk and use Firmadyne's extractor (see instructions [here](https://github.com/BUseclab/firmadyne) ) or you can use our Docker image which has the database, binwalk and the extractor installed.
+
+Execute:
+
+```
+service postgresql start
+<firmadyne_workdir>/sources/extractor/extractor.py -b <brand> -sql 127.0.0.1 -np "<image_name>" <work_dir>/images
+```
+
+You should change `<firmadyne_workdir>` to where firmadyne is installed (`/firmadyne/` within the docker) and `<work_dir>` 
+to your work directory (`/output/` within the docker).
+
+Then run the FirmSolo experiments as explained above.
 
 # Bibtex citation
 
