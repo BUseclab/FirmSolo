@@ -22,7 +22,7 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 req.packages.urllib3.disable_warnings(InsecureRequestWarning)
 from stage2b.get_order import Module_Order
 from stage1.find_kernels_syms import extract_kernel_ksym_entry
-
+from tqdm import tqdm
 
 done = []
 kernel_org = "https://mirrors.edge.kernel.org/pub/linux/kernel/"
@@ -90,23 +90,29 @@ class Image():
             subdir = f"v{vers}.x"
 
         path = Path(kernel_dir)
-        tar_path = Path(f"{cu.tar_dir}/{kernel}.tar.gz")
-        
-        if not path.exists() and not tar_path.exists():
-            remote_tar_file = "{}{}/{}.tar.gz".format(kernel_org, subdir,
-                                                      kernel)
-            local_tar_file = "{}/{}.tar.gz".format(cu.tar_dir, kernel)
-            cmd = "wget {} -O {}".format(remote_tar_file, local_tar_file)
-            print("Kernel", self.kernel, "does not exist in local repository...")
-            print ("Downloading kernel from url:", remote_tar_file)
-            try:
-                res = subprocess.check_output(cmd, shell = True)
-            except:
-                print(traceback.format_exc())
-                return False
+
+        if not (path.exists()):
+            remote_tar_file = "{}{}/{}.tar.gz".format(kernel_org, subdir, kernel)
+            success = self.download_and_print(kernel, remote_tar_file)
+            if not success:
+                remote_tar_file = f"https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/snapshot/{kernel}.tar.gz"
+                success = self.download_and_print(kernel, remote_tar_file)
+            return success
 
         return True
 
+    def download_and_print(self, kernel, remote_tar_file):
+        
+        local_tar_file = "{}/{}.tar.gz".format(cu.tar_dir, kernel)
+        cmd = "wget {} -O {}".format(remote_tar_file, local_tar_file)
+        print("Kernel", self.kernel, "does not exist in local repository...")
+        print ("Downloading kernel from url:", remote_tar_file)
+        try:
+            res = subprocess.check_output(cmd, shell = True)
+        except:
+            print(traceback.format_exc())
+            return False
+        return True
     ### Function to get the kernel version and the extraversion used by
     ### the image
     def get_kernel_info(self,kernel):
@@ -620,7 +626,7 @@ class Kernel():
         k_dir = [self.kernel_dir for i in range(len(symbols))]
         data = [list(x) for x in zip(symbols,dict_list,k_dir)]
        
-        res = p.map(gsi.find_definition,data)        
+        res = list(tqdm(p.imap(gsi.find_definition, data), total=len(data)))       
         
         ### Now update the dictionary with new entries
         for i,sym in enumerate(symbols):
@@ -629,7 +635,6 @@ class Kernel():
         
         ### Now filter out all the empty files
         export_files = list(filter(None,res))
-                
         return export_files
     
     ### Now this is a dictionary holding the inlined conditional guards for some symbols
@@ -765,9 +770,13 @@ def get_image_info(image):
     
     img.get_ksyms()
     kern = Kernel(img.kernel)
+    print('Creating dictionary directory')
     kern.create_dict_dir()
+    print('Reading symbol dictionary')
     kern.read_sym_dictionary(img.arch)
+    print('Reading guard dictionary')
     kern.read_guard_dictionary()
+    print('Find and cscope')
     tar_exists = kern.find_and_cscope(img.arch)
     if not tar_exists or img.arch == None:
         print("Tar does not exist")
@@ -776,10 +785,15 @@ def get_image_info(image):
     ### Use multiple threads because the static analysis will be faster
     p = Pool(cu.num_of_threads)
 
+    print('Find sym export files (unknown_syms)')
     sym_files = kern.find_sym_export_files(img.unknown_syms,img.arch,p)
+    print('Find sym export files (ksyms)')
     ksym_files = kern.find_sym_export_files(img.ksyms,img.arch,p)
+    print('Save symbol dictionary')
     kern.save_sym_dictionary(img.arch)
+    print('Merge files')
     img.merge_files(sym_files,ksym_files)
+    print('Break arbitration')
     img.break_arbitration()
     seen_options, additional_guards = kern.find_sym_and_guard_conds(img.final_files,img.symbols)
     seen_options = filter_options(seen_options)

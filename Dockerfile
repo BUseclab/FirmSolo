@@ -61,7 +61,7 @@ RUN apt-get update && apt-get install -y \
 # Ingnore pip's warnings for root
 ENV PIP_ROOT_USER_ACTION=ignore
 
-RUN pip3 install ply anytree sympy requests pexpect scipy
+RUN pip3 install ply anytree sympy requests pexpect scipy tqdm
 
 # Install binwalk also patch a bug with sasquatch
 RUN git clone -b v2.3.2 --depth 1 https://github.com/ReFirmLabs/binwalk.git /root/binwalk && \
